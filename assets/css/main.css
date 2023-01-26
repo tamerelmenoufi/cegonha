@@ -2647,6 +2647,7 @@ section {
 .footer {
   color: var(--color-white);
   font-size: 14px;
+  background-image: url(../img/rodape-bg.png);
 }
 .footer .footer-content {
   background: var(--color-secondary);
