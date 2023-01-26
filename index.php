@@ -50,7 +50,7 @@
 <body>
 
 <style>
-img-bg-rodape{
+.img-bg-rodape{
   background: url(../img/rodape-bg.jpg) no-repeat ;
 }
 
