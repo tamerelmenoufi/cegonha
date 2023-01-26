@@ -58,10 +58,11 @@
 </div>
 
   <!-- ======= Header ======= -->
+  
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center mt-3">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-        <h2 style="font-size:38px;color:#eee; box-shadow: 2px 2px 5px #000;font-weight: 800"><b>Chá 
+        <h2 style="font-size:50px;color:#eee; text-shadow: 2px 2px 5px #000;font-weight: 800"><b>Chá 
           Revelação </b></h2>
         <img src="assets/img/cegonha2.png" class="img-fluid animated">
        
