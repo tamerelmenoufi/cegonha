@@ -48,6 +48,15 @@
 </head>
 
 <body>
+
+<style>
+img-bg-rodape{
+  background: url(../img/rodape-bg.jpg) no-repeat ;
+}
+
+</style>
+
+
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -191,7 +200,7 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer img-bg-rodape">
 
 
 
