@@ -49,13 +49,6 @@
 
 <body>
 
-<style>
-.img-bg-rodape{
-  background: url(../img/rodape-bg.jpg) no-repeat ;
-}
-
-</style>
-
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">

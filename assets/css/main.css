@@ -20,6 +20,10 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.img-bg-rodape{
+  background: url(../img/rodape-bg.jpg) no-repeat ;
+}
+
 
 
 
