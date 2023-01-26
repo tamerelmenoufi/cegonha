@@ -61,9 +61,9 @@
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center mt-3">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-        <h2 style="font-size:25px;color:#fff; box-shadow: 2px 2px 5px #000"><b>Chá </b>
-          <br><b >Revelação</b></h2>
-        <img src="assets/img/cegonha1.png" class="img-fluid animated">
+        <h2 style="font-size:38px;color:#eee; box-shadow: 2px 2px 5px #000;font-weight: 800"><b>Chá 
+          Revelação </b></h2>
+        <img src="assets/img/cegonha2.png" class="img-fluid animated">
        
   </section>
 
