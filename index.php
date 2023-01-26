@@ -61,11 +61,10 @@
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center mt-3">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-        <h2>Olá Tio Tamer</h2>
-        <img src="assets/img/cegonha.png" class="img-fluid animated">
-        <p>Estou chegando em breve para a alegria de meus pais. <br>
-            Quero te convidar para compartilhar esse momento incrível.</p>
-    </div>
+        <h2 style="font-size:25px;color:#fff; box-shadow: 2px 2px 5px #000"><b>Chá </b>
+          <br><b >Revelação</b></h2>
+        <img src="assets/img/cegonha1.png" class="img-fluid animated">
+       
   </section>
 
   <main id="main">
