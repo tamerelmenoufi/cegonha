@@ -21,7 +21,13 @@ body {
   background-size: cover;
 }
 .img-bg-rodape{
-  background: url(../img/rodape-bg.png) no-repeat ;
+  background: url(../img/rodape-bg.png) no-repeat center fixed; 
+  background-size: auto auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+};
 }
 
 
