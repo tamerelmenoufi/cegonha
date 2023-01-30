@@ -1,5 +1,5 @@
 <?php
-    include("{$_SERVER['DOCUMENT_ROOT']}/app/projectBarbearia/painel/lib/includes.php");
+    include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
     vl(['ProjectPainel']);
 ?>
 <style>
@@ -16,7 +16,7 @@
       <i class="fa-solid fa-bars"></i>
     </div>
     <div class="d-none d-sm-block ms-2">
-    <img src="img/logo-topo.png" style="height:40px; margin-right:20px;" >
+    CEGONHA
 </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

@@ -1,5 +1,5 @@
 <?php
-    include("{$_SERVER['DOCUMENT_ROOT']}/app/projectBarbearia/painel/lib/includes.php");
+    include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
     vl(['ProjectPainel']);
 
     if($_POST['categoria']) $_SESSION['categoriaProduto'] = $_POST['categoria'];

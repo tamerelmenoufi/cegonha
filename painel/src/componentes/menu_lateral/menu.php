@@ -1,5 +1,5 @@
 <?php
-    include("{$_SERVER['DOCUMENT_ROOT']}/app/projectBarbearia/painel/lib/includes.php");
+    include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
     vl(['ProjectPainel']);
 ?>
 
@@ -36,7 +36,7 @@
     </div>
 
 
-    <div class="row mb-1  menu-cinza">
+    <!-- <div class="row mb-1  menu-cinza">
       <div class="col">
         <a url="src/vendas/index.php" class="text-decoration-none texto-cinza" data-bs-dismiss="offcanvas" aria-label="Close">
           <i class="fa-solid fa-clipboard-list"></i> Vendas
@@ -51,7 +51,7 @@
           <i class="fa-solid fa-clipboard-list"></i> Usuários/Colaboradores
         </a>
       </div>
-    </div>
+    </div> -->
 
     <div class="row mb-1 menu-cinza">
       <div class="col">
@@ -69,13 +69,13 @@
       </div>
     </div>
 
-    <div class="row mb-1 menu-cinza">
+    <!-- <div class="row mb-1 menu-cinza">
       <div class="col">
         <a url="src/noticias/index.php" class="text-decoration-none texto-cinza" data-bs-dismiss="offcanvas" aria-label="Close">
           <i class="fa-solid fa-clipboard-list"></i> Eventos
         </a>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </div>
