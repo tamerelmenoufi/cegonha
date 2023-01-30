@@ -31,6 +31,7 @@
                             left join produtos d on a.produto = d.codigo
                             order by a.venda";
                   $result = mysqli_query($con, $query);
+                  $TotalArrecadado = 0;
                   while($d = mysqli_fetch_object($result)){
                 ?>
                 <tr>
@@ -42,8 +43,13 @@
                   <td style="white-space: nowrap;"><?=$d->valor?></td>
                 </tr>
                 <?php
+                $TotalArrecadado = ($TotalArrecadado + $d->valor);
                   }
                 ?>
+                <tr>
+                  <td style="white-space: nowrap; text-align:right; font-weight:bold;" colspan="4">Total Arrecadado</td>
+                  <td style="white-space: nowrap; text-align:left; font-weight:bold;"><?=$TotalArrecadado?></td>
+                </tr>
               </tbody>
             </table>
           </div>
