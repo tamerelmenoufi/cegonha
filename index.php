@@ -87,11 +87,9 @@
     <section id="featured-services" class="featured-services">
       <div class="container">
         <div class="section-header">
-          <h2>
-            <img src="assets/img/bebeverde.png" style="height:60px; margin-right:20px;" class="img-fluid animated">
-            Minha Listinha
-            <img src="assets/img/beberoxo.png" style="height:60px; margin-right:20px;" class="img-fluid animated">
-          </h2>
+         
+            <img src="assets/img/titulolista.png" style="" class="img-fluid animated">
+         
           <p>Montei minha lojinha com tudo que vou precisar.<br>É só clicar e comprar </p>
         </div>
 
