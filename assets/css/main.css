@@ -20,8 +20,17 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-.img-bg-rodape{
+.img-bg-rodape-celular{
   background: url(../img/rodape-bg-cl.png) no-repeat center ; 
+  background-size: auto auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+};
+
+.img-bg-rodape{
+  background: url(../img/rodape-bg.png) no-repeat center ; 
   background-size: auto auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;

@@ -204,10 +204,10 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer img-bg-rodape">
-
-
-
+ 
+ 
+ <div class=" img-bg-rodape d-none d-sm-block">
+  <footer id="footer" class="footer ">
     <div class="footer-legal text-center" style="min-height:80px; background-color:rgb(0,0,0, 0.1); color:#5d5d5d">
       <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
         <div>
@@ -218,7 +218,24 @@
       </div>
     </div>
 
-  </footer><!-- End Footer -->
+  </footer>
+ </div>
+
+<div class=" img-bg-rodape-celular d-block d-sm-none">
+  <footer id="footer" class="footer">
+    <div class="footer-legal text-center" style="min-height:80px; background-color:rgb(0,0,0, 0.1); color:#5d5d5d">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
+        <div>
+            <p>Rua 37, Qd 50, Parque Dez, CEP:69000-987</p>
+            <p>contato@gmail.com</p>
+            <a href="#" class="read-more align-self-start agenda" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><span>Painel de Controle</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+          </div>
+  <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
