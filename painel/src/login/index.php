@@ -2,16 +2,15 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 
     if($_POST['acao'] == 'login'){
-        $email = $_POST['email'];
+        $login = $_POST['login'];
         $senha = md5($_POST['senha']);
 
-        $query = "select * from colaboradores where email = '{$email}' and senha = '{$senha}'";
+        $query = "select * from usuarios where login = '{$login}' and senha = '{$senha}'";
         $result = mysqli_query($con, $query);
 
         if(mysqli_num_rows($result)){
             $d = mysqli_fetch_object($result);
             $_SESSION['ProjectPainel'] = $d;
-            $_SESSION['PeriodoLoja'] = mysqli_fetch_object(mysqli_query($con, "select * from configuracoes where codigo = '1'"));
             $retorno = [
                 'sucesso' => true,
                 'ProjectPainel' => $d->codigo,
@@ -177,8 +176,8 @@ body {
             <!-- <p id="profile-name" class="profile-name-card"></p> -->
 
             <div class="form-floating mb-2">
-                <input type="text" class="form-control" id="email" placeholder="Digite seu E-mail" required autofocus>
-                <label for="email">Digite seu E-mail</label>
+                <input type="text" class="form-control" id="login" placeholder="Digite seu Login" required autofocus>
+                <label for="login">Digite seu Login</label>
             </div>
 
             <div class="form-floating mb-2">
@@ -214,7 +213,7 @@ body {
     $(function(){
         Carregando('none');
         AcaoBotao = ()=>{
-            email = $("#email").val();
+            login = $("#login").val();
             senha = $("#senha").val();
             Carregando();
             $.ajax({
@@ -223,7 +222,7 @@ body {
                 dataType:"json",
                 data:{
                     acao:'login',
-                    email,
+                    login,
                     senha
                 },
                 success:function(dados){
