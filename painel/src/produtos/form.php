@@ -72,14 +72,14 @@
   }
 </style>
 
-<h3 class="titulo<?=$md5?>">Editar Item</h3>
+<h3 class="titulo<?=$md5?>">Editar Presente</h3>
 
     <form id="acaoMenu<?=$md5?>">
       <h5><?=$_SESSION['categoriaProdutoNome']?></h5>
       <div class="form-floating mb-3">
         <input <?=(($d->vendas or $d->estoque)?'disabled="disabled"':false)?> type="text" class="form-control" id="produto" name="produto" placeholder="Título do Produto" value="<?=$d->produto?>">
-        <label for="produto">Produto</label>
-        <div class="form-text">Digite o título da Produto.</div>
+        <label for="produto">Presente</label>
+        <div class="form-text">Digite o nome do presente.</div>
       </div>
 
       <div showImage class="form-floating" style="display:<?=(($d->imagem)?'block':'none')?>">
@@ -100,12 +100,12 @@
         <div class="input-group">
           <span class="input-group-text">Valor R$ </span>
           <input type="number" class="form-control" value="<?=$d->valor?>" id="valor" name="valor" min="0" max="10000" step=".01">
-          <span class="input-group-text">Estoque</span>
-          <div class="form-control"><?=$d->estoque?></div>
+          <span class="input-group-text">Quantidade</span>
+          <input type="number" class="form-control" value="<?=$d->estoque?>" id="estoque" name="estoque" min="0" max="10000" step=".00">
         </div>
       </div>
 
-      <div class="grupo_servico" style="display:<?=(($d->tipo == 's')?'inline':'none')?>">
+      <!-- <div class="grupo_servico" style="display:<?=(($d->tipo == 's')?'inline':'none')?>">
         <div class="form-floating mb-3">
           <div class="input-group">
             <span class="input-group-text">Tempo de Atendimento</span>
@@ -113,17 +113,17 @@
             <span class="input-group-text">Especificar em Minuto</span>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
-      <div class="form-floating">
+      <!-- <div class="form-floating">
         <select id="tipo" name="tipo" class="form-control" placeholder="Tipo">
           <option value="p" <?=(($d->tipo == 'p')?'selected':false)?>>Produto</option>
           <option value="s" <?=(($d->tipo == 's')?'selected':false)?>>Serviço</option>
         </select>
         <label for="tipo">Tipo</label>
         <div class="form-text">Selecione o tipo do registro</div>
-      </div>
+      </div> -->
 
 
       <div class="form-floating mb-3">
@@ -135,7 +135,7 @@
       </div>
 
 
-      <div class="grupo_nota" style="display:<?=(($d->tipo == 'p')?'inline':'none')?>">
+      <!-- <div class="grupo_nota" style="display:<?=(($d->tipo == 'p')?'inline':'none')?>">
 
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="ncm" name="nota_ncm" placeholder="NCM do Produto" value="<?=$d->ncm?>">
@@ -167,7 +167,7 @@
           <div class="form-text">Digite ICMS do Produto.</div>
         </div>
 
-      </div>
+      </div> -->
 
 
       <div class="form-floating">
@@ -210,16 +210,16 @@
       //   $(this).attr("value",vl);
       // });
 
-      $("#tipo").change(function(){
-        opc = $(this).val();
-        if(opc == 'p'){
-          $(".grupo_nota").css("display","inline");
-          $(".grupo_servico").css("display","none");
-        }else{
-          $(".grupo_nota").css("display","none");
-          $(".grupo_servico").css("display","inline");
-        }
-      });
+      // $("#tipo").change(function(){
+      //   opc = $(this).val();
+      //   if(opc == 'p'){
+      //     $(".grupo_nota").css("display","inline");
+      //     $(".grupo_servico").css("display","none");
+      //   }else{
+      //     $(".grupo_nota").css("display","none");
+      //     $(".grupo_servico").css("display","inline");
+      //   }
+      // });
 
       $( "#acaoMenu<?=$md5?>" ).on( "submit", function( event ) {
 
