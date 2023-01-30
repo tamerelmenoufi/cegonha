@@ -87,11 +87,11 @@
     <section id="featured-services" class="featured-services">
       <div class="container">
         <div class="section-header">
-          <h2>           
+          <h2 style=" margin-bottom:0px;">           
             Minha Listinha          
           </h2>
 
-<img src="assets/img/titulolista.png" style="height:60px; margin-right:20px;" class="img-fluid animated">
+<img src="assets/img/titulolista.png" style="height:100px; margin-right:0px;" class="img-fluid animated">
          
 <p>Montei minha lojinha com tudo que vou precisar.<br>É só clicar e comprar </p>
         </div>
