@@ -278,6 +278,7 @@
     }
 
     $(function(){
+      alert('erro')
       $.ajax({
         url:"endereco.php",
         success:function(dados){
