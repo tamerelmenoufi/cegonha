@@ -271,10 +271,10 @@
     || navigator.userAgent.match(/BlackBerry/i)
     || navigator.userAgent.match(/Windows Phone/i)
     ){
-        $("#offcanvasRight").css("width","100%")
+        $("#offcanvasRight").css("width","100%");
     }
     else {
-        $("#offcanvasRight").css("width","600px")
+        $("#offcanvasRight").css("width","600px");
     }
 
     $(function(){
