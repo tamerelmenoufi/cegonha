@@ -21,7 +21,7 @@ body {
   background-size: cover;
 }
 .img-bg-rodape-celular{
-  background: url(../img/rodape-bg-cl.png) no-repeat center ; 
+  background: url(../img/rodape-bg-cl.png) no-repeat center ;
   background-size: auto auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -30,7 +30,7 @@ body {
 }
 
 .img-bg-rodape{
-  background: url(../img/rodape-bg.png) no-repeat center ; 
+  background: url(../img/rodape-bg.png) no-repeat center ;
   background-size: auto auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -983,7 +983,7 @@ section {
   padding: 30px;
   transition: all ease-in-out 0.4s;
   /* background: var(--color-white); */
-  background: rgb(255,255,255, 0.7);
+  background: rgb(255,255,255);
   height: 100%;
 }
 .featured-services .service-item .icon {
