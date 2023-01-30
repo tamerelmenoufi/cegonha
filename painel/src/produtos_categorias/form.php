@@ -9,25 +9,25 @@
       unset($dados['codigo']);
 
       //Imagem
-      $img = false;
-      unset($dados['base64']);
-      unset($dados['imagem_tipo']);
-      unset($dados['imagem_nome']);
+      // $img = false;
+      // unset($dados['base64']);
+      // unset($dados['imagem_tipo']);
+      // unset($dados['imagem_nome']);
 
-      if($_POST['base64'] and $_POST['imagem_tipo'] and $_POST['imagem_nome']){
+      // if($_POST['base64'] and $_POST['imagem_tipo'] and $_POST['imagem_nome']){
 
-        if($_POST['imagem']) unlink("../volume/produtos_categorias/{$_POST['imagem']}");
+      //   if($_POST['imagem']) unlink("../volume/produtos_categorias/{$_POST['imagem']}");
 
-        $base64 = explode('base64,', $_POST['base64']);
-        $img = base64_decode($base64[1]);
-        $ext = substr($_POST['imagem_nome'], strripos($_POST['imagem_nome'],'.'), strlen($_POST['imagem_nome']));
-        $nome = md5($_POST['base64'].$_POST['imagem_tipo'].$_POST['imagem_nome'].date("YmdHis")).$ext;
+      //   $base64 = explode('base64,', $_POST['base64']);
+      //   $img = base64_decode($base64[1]);
+      //   $ext = substr($_POST['imagem_nome'], strripos($_POST['imagem_nome'],'.'), strlen($_POST['imagem_nome']));
+      //   $nome = md5($_POST['base64'].$_POST['imagem_tipo'].$_POST['imagem_nome'].date("YmdHis")).$ext;
 
-        if(!is_dir("../volume/produtos_categorias")) mkdir("../volume/produtos_categorias");
-        if(file_put_contents("../volume/produtos_categorias/".$nome, $img)){
-          $dados['imagem'] = $nome;
-        }
-      }
+      //   if(!is_dir("../volume/produtos_categorias")) mkdir("../volume/produtos_categorias");
+      //   if(file_put_contents("../volume/produtos_categorias/".$nome, $img)){
+      //     $dados['imagem'] = $nome;
+      //   }
+      // }
       //Fim da Verificação da Imagem
 
 
@@ -72,7 +72,7 @@
   }
 </style>
 
-<h3 class="titulo<?=$md5?>">Gerenciamento de Notícias</h3>
+<h3 class="titulo<?=$md5?>">Gerenciamento da Lista de Presentes</h3>
 
     <form id="acaoMenu">
 
@@ -82,18 +82,18 @@
         <div class="form-text">Digite o título da Categoria.</div>
       </div>
 
-      <div showImage class="form-floating" style="display:<?=(($d->imagem)?'block':'none')?>">
+      <!-- <div showImage class="form-floating" style="display:<?=(($d->imagem)?'block':'none')?>">
         <img src="<?=$localPainel?>src/volume/produtos_categorias/<?=$d->imagem?>" class="img-fluid mt-3 mb-3" alt="" />
-      </div>
+      </div> -->
 
       <!-- <div class="form-floating"> -->
-        <input type="file" class="form-control" placeholder="Banner">
+        <!-- <input type="file" class="form-control" placeholder="Banner">
         <input type="hidden" id="base64" name="base64" value="" />
         <input type="hidden" id="imagem_tipo" name="imagem_tipo" value="" />
         <input type="hidden" id="imagem_nome" name="imagem_nome" value="" />
-        <input type="hidden" id="imagem" name="imagem" value="<?=$d->imagem?>" />
+        <input type="hidden" id="imagem" name="imagem" value="<?=$d->imagem?>" /> -->
         <!-- <label for="url">Banner</label> -->
-        <div class="form-text mb-3">Selecione a imagem para o Banner</div>
+        <!-- <div class="form-text mb-3">Selecione a imagem para o Banner</div> -->
       <!-- </div> -->
 
 
@@ -176,40 +176,40 @@
 
 
 
-      if (window.File && window.FileList && window.FileReader) {
+      // if (window.File && window.FileList && window.FileReader) {
 
-        $('input[type="file"]').change(function () {
+      //   $('input[type="file"]').change(function () {
 
-            if ($(this).val()) {
-                var files = $(this).prop("files");
-                for (var i = 0; i < files.length; i++) {
-                    (function (file) {
-                        var fileReader = new FileReader();
-                        fileReader.onload = function (f) {
-
-
-                        var Base64 = f.target.result;
-                        var type = file.type;
-                        var name = file.name;
-
-                        $("#base64").val(Base64);
-                        $("#imagem_tipo").val(type);
-                        $("#imagem_nome").val(name);
-
-                        $("div[showImage] img").attr("src",Base64);
-                        $("div[showImage]").css("display",'block');
+      //       if ($(this).val()) {
+      //           var files = $(this).prop("files");
+      //           for (var i = 0; i < files.length; i++) {
+      //               (function (file) {
+      //                   var fileReader = new FileReader();
+      //                   fileReader.onload = function (f) {
 
 
+      //                   var Base64 = f.target.result;
+      //                   var type = file.type;
+      //                   var name = file.name;
 
-                        };
-                        fileReader.readAsDataURL(file);
-                    })(files[i]);
-                }
-          }
-        });
-      } else {
-        alert('Nao suporta HTML5');
-      }
+      //                   $("#base64").val(Base64);
+      //                   $("#imagem_tipo").val(type);
+      //                   $("#imagem_nome").val(name);
+
+      //                   $("div[showImage] img").attr("src",Base64);
+      //                   $("div[showImage]").css("display",'block');
+
+
+
+      //                   };
+      //                   fileReader.readAsDataURL(file);
+      //               })(files[i]);
+      //           }
+      //     }
+      //   });
+      // } else {
+      //   alert('Nao suporta HTML5');
+      // }
 
 
 

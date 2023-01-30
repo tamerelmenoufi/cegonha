@@ -33,7 +33,7 @@
     <div class="row">
       <div class="col">
         <div class="card">
-          <h5 class="card-header">Lista de Categorias de Produtos / Serviços</h5>
+          <h5 class="card-header">Lista de Categorias dos Presentes</h5>
           <div class="card-body">
             <div style="display:flex; justify-content:end">
                 <button
@@ -73,7 +73,7 @@
                   <td style="white-space: nowrap;">
 
                     <button class="btn btn-success btn-sm" produtos="<?=$d->codigo?>" categoria="<?=$d->categoria?>">
-                    <i class="fa-solid fa-box-open"></i> Itens
+                    <i class="fa-solid fa-box-open"></i> Presentes
                     </button>
 
                     <button
