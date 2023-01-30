@@ -160,7 +160,7 @@
 
 body {
 
-    background: rgb();
+    background: rgb(99,205, 245, 0.5);
     background-size: auto auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
