@@ -160,7 +160,7 @@
 
 body {
 
-    background: url(img/fundo-bar.jpg) no-repeat center fixed;
+    background: rgb();
     background-size: auto auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
