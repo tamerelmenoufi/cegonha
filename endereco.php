@@ -16,10 +16,9 @@ Data/Hora
     </center>
 </div>
 
-<p style="font-size: 31px;font-weight: 800;color: #807d86;text-align:center">
-25/02/2023
+<p style="font-size: 31px;font-weight: 800;color: #b385d7;text-align:center">
+25/02/2023<br>
+Ás 18H
     </p>
-    <p style="font-size: 31px;font-weight: 800;color: #807d86;text-align:center">
-Às 18H
-    </p>
+   
  </div>
