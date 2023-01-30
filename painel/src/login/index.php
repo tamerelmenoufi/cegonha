@@ -174,7 +174,7 @@ body {
                     <input type="checkbox" value="remember-me"> Manter-me sempre conectado
                 </label>
             </div> -->
-            <button id="Acessar" class="btn btn-lg btn-warner btn-block btn-signinXX" type="submit">Entrar</button>
+            <button id="Acessar" class="btn btn-lg btn-warning btn-block btn-signinXX" type="submit">Entrar</button>
 
             <!-- <div class="form-signin">
                 <span id="reauth-email" class="reauth-email"></span>
