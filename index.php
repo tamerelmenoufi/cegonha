@@ -72,8 +72,8 @@
 </div>
 
   <div class="d-block d-sm-none" >
-          <img src="assets/img/cegonhaverde.png" class="img-fluid animated">
-          <img src="assets/img/cegonhainter.png" class="img-fluid animated">
+          <img style="margin-bottom:0px" src="assets/img/cegonhaverde.png" class="img-fluid animated">
+          <img style="height:75px;margin-bottom:0px;margin-top:0px" src="assets/img/cegonhainter.png" class="img-fluid animated">
           <img src="assets/img/cegonharoxa.png" class="img-fluid animated">
 
 </div>
