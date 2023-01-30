@@ -279,15 +279,15 @@
 
     $(function(){
       alert('erro')
-      $.ajax({
-        url:"endereco.php",
-        success:function(dados){
-          $(".LateralDireita").html(dados);
-        },
-        error:function(){
-          alert('erro')
-        }
-      })
+      // $.ajax({
+      //   url:"endereco.php",
+      //   success:function(dados){
+      //     $(".LateralDireita").html(dados);
+      //   },
+      //   error:function(){
+      //     alert('erro')
+      //   }
+      // })
     })
 
 
