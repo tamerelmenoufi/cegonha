@@ -56,7 +56,7 @@
     <div class="row mb-1 menu-cinza">
       <div class="col">
         <a url="src/clientes/index.php" class="text-decoration-none texto-cinza" data-bs-dismiss="offcanvas" aria-label="Close">
-          <i class="fa-solid fa-clipboard-list"></i> Clientes
+          <i class="fa-solid fa-clipboard-list"></i> Convidados
         </a>
       </div>
     </div>
@@ -64,7 +64,7 @@
     <div class="row mb-1 menu-cinza">
       <div class="col">
         <a url="src/produtos_categorias/index.php" class="text-decoration-none texto-cinza" data-bs-dismiss="offcanvas" aria-label="Close">
-          <i class="fa-solid fa-clipboard-list"></i> Produtos / Serviços
+          <i class="fa-solid fa-clipboard-list"></i> Lista de Presentes
         </a>
       </div>
     </div>
