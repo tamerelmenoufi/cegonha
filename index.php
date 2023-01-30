@@ -263,6 +263,8 @@
   <script src="assets/js/main.js"></script>
 <script>
 
+  $(function(){
+
     if( navigator.userAgent.match(/Android/i)
     || navigator.userAgent.match(/webOS/i)
     || navigator.userAgent.match(/iPhone/i)
@@ -277,7 +279,7 @@
         $("#offcanvasRight").css("width","600px");
     }
 
-    $(function(){
+
       alert('erro')
       // $.ajax({
       //   url:"endereco.php",
