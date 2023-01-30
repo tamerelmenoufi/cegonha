@@ -160,7 +160,7 @@
 
 body {
 
-    background: linear-gradient(rgb(99,205, 245, 0.5), pink);
+    background: linear-gradient(90deg, rgb(99,205, 245, 0.5), rgb(244,132, 132, 0.5));
     background-size: auto auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
