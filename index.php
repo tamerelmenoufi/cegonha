@@ -213,12 +213,15 @@
     <div class="footer-legal text-center" style="min-height:80px; background-color:rgb(0,0,0, 0.1); color:#5d5d5d">
       <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
         <div>
-        <button type="button" class="btn btn-outline-secondary">
+      
             <a href="#" class="read-more align-self-start agenda"
              type="button" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-             Painel de Controle <i class="bi bi-arrow-right"></i></a>
-              </button>
+              <img src="assets/img/botaoinforma.png" class="img-fluid animated">
+
+
+            </a>
+              
         </div>
       </div>
     </div>
