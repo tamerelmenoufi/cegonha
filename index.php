@@ -52,9 +52,7 @@
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body LateralDireita">
-    ...
-  </div>
+  <div class="offcanvas-body LateralDireita"></div>
 </div>
 
   <!-- ======= Header ======= -->
@@ -236,6 +234,14 @@
     else {
         $("#offcanvasRight").css("width","600px")
     }
+
+
+    $.ajax({
+      url:"endereco.php",
+      success:function(dados){
+        $(".LateralDireita").html(dados);
+      }
+    })
 
 </script>
 </body>
