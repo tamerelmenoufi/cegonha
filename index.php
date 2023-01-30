@@ -277,16 +277,18 @@
         $("#offcanvasRight").css("width","600px")
     }
 
-
-    $.ajax({
-      url:"endereco.php",
-      success:function(dados){
-        $(".LateralDireita").html(dados);
-      },
-      error:function(){
-        alert('erro')
-      }
+    $(function(){
+      $.ajax({
+        url:"endereco.php",
+        success:function(dados){
+          $(".LateralDireita").html(dados);
+        },
+        error:function(){
+          alert('erro')
+        }
+      })
     })
+
 
 </script>
 </body>
