@@ -27,7 +27,7 @@
                   $query = "select a.*, b.nome as convidado, c.categoria as nome_categoria, d.produto as nome_produto
                             from vendas_produtos a
                             left join clientes b on a.cliente = b.codigo
-                            left join produtos_categirias c on a.categoria = c.codigo
+                            left join produtos_categorias c on a.categoria = c.codigo
                             left join produtos d on a.produto = d.codigo
                             order by a.venda";
                   $result = mysqli_query($con, $query);
