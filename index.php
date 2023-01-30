@@ -217,7 +217,7 @@
             <a href="#" class="read-more align-self-start agenda"
              type="button" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <img src="assets/img/botaoinforma.png" class="img-fluid animated">
+              <img src="assets/img/botaoinforma.png" style="height:75px; margin-right:0px;"  class="img-fluid animated">
 
 
             </a>
@@ -234,9 +234,13 @@
     <div class="footer-legal text-center" style="min-height:80px; background-color:rgb(0,0,0, 0.1); color:#5d5d5d">
       <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
         <div>
-            <p>Rua 37, Qd 50, Parque Dez, CEP:69000-987</p>
-            <p>contato@gmail.com</p>
-            <a href="#" class="read-more align-self-start agenda" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><span>Painel de Controle</span> <i class="bi bi-arrow-right"></i></a>
+        <a href="#" class="read-more align-self-start agenda"
+             type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <img src="assets/img/botaoinforma.png" style="height:75px; margin-right:0px;"  class="img-fluid animated">
+
+
+            </a>
         </div>
       </div>
     </div>
