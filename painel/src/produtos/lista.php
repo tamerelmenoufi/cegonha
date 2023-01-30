@@ -100,7 +100,7 @@
                     <i class="fa-regular fa-pen-to-square"></i> Editar
                     </button>
 
-                    <button <?=(($d->estoque or $d->vendas)?'disabled="disabled"':'delete="'.$d->codigo.'"')?> class="btn btn-danger btn-sm" imagem="<?=$d->imagem?>">
+                    <button <?=(($d->vendas)?'disabled="disabled"':'delete="'.$d->codigo.'"')?> class="btn btn-danger btn-sm" imagem="<?=$d->imagem?>">
                     <i class="fa-solid fa-trash-can"></i> Excluir
                     </button>
 
