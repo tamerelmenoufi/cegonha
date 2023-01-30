@@ -38,9 +38,9 @@
                   <td style="white-space: nowrap;"><?=$d->convidado?></td>
                   <!-- <td style="white-space: nowrap;"><?=$d->cpf?></td> -->
                   <td style="white-space: nowrap;"><?=$d->nome_categoria?><br><?=$d->nome_produto?></td>
-                  <td style="white-space: nowrap;"><?=$d->valor_unitario?></td>
+                  <td style="white-space: nowrap;">R$ <?=number_format($d->valor_unitario, 2, ',','.')?></td>
                   <td style="white-space: nowrap;"><?=$d->quantidade?></td>
-                  <td style="white-space: nowrap;"><?=$d->valor?></td>
+                  <td style="white-space: nowrap;">R$ <?=number_format($d->valor, 2, ',','.')?></td>
                 </tr>
                 <?php
                 $TotalArrecadado = ($TotalArrecadado + $d->valor);
@@ -48,7 +48,7 @@
                 ?>
                 <tr>
                   <td style="white-space: nowrap; text-align:right; font-weight:bold;" colspan="4">Total Arrecadado</td>
-                  <td style="white-space: nowrap; text-align:left; font-weight:bold;"><?=$TotalArrecadado?></td>
+                  <td style="white-space: nowrap; text-align:left; font-weight:bold;">R$ <?=number_format($TotalArrecadado, 2, ',','.')?></td>
                 </tr>
               </tbody>
             </table>
