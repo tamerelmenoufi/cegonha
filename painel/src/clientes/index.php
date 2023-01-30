@@ -23,7 +23,7 @@
     <div class="row">
       <div class="col">
         <div class="card">
-          <h5 class="card-header">Lista de Clientes</h5>
+          <h5 class="card-header">Lista de Convidados</h5>
           <div class="card-body">
             <div style="display:flex; justify-content:end">
                 <button
@@ -33,7 +33,7 @@
                     href="#offcanvasDireita"
                     role="button"
                     aria-controls="offcanvasDireita"
-                >Novo</button>
+                >Novo Convite</button>
             </div>
 
 
@@ -41,10 +41,10 @@
               <thead>
                 <tr>
                   <th scope="col" style="width:50%">Nome</th>
-                  <th scope="col">CPF</th>
+                  <!-- <th scope="col">CPF</th> -->
                   <th scope="col">Telefone</th>
                   <th scope="col" style="width:50%">E-mail</th>
-                  <th scope="col">Compras</th>
+                  <!-- <th scope="col">Compras</th> -->
                   <th scope="col">Ações</th>
                 </tr>
               </thead>
@@ -56,13 +56,13 @@
                 ?>
                 <tr>
                   <td style="white-space: nowrap;"><?=$d->nome?></td>
-                  <td style="white-space: nowrap;"><?=$d->cpf?></td>
+                  <!-- <td style="white-space: nowrap;"><?=$d->cpf?></td> -->
                   <td style="white-space: nowrap;"><?=$d->telefone?></td>
                   <td style="white-space: nowrap;"><?=$d->email?></td>
-                  <td style="white-space: nowrap;"><?=$d->vendas?></td>
+                  <!-- <td style="white-space: nowrap;"><?=$d->vendas?></td> -->
                   <td style="white-space: nowrap;">
 
-                    <button
+                    <!-- <button
                       class="btn btn-primary"
                       cliente="<?=$d->codigo?>"
                       nome="<?=$d->nome?>"
@@ -72,7 +72,7 @@
                       aria-controls="offcanvasDireita"
                     >
                       Endereços
-                    </button>
+                    </button> -->
 
                     <button
                       class="btn btn-primary"
@@ -135,19 +135,7 @@
             })
         })
 
-        $("button[cliente]").click(function(){
-            cliente = $(this).attr("cliente");
-            $.ajax({
-                url:"src/clientes/enderecos.php",
-                type:"POST",
-                data:{
-                  cliente
-                },
-                success:function(dados){
-                    $(".LateralDireita").html(dados);
-                }
-            })
-        })
+
 
         $("button[delete]").click(function(){
             deletar = $(this).attr("delete");
