@@ -27,7 +27,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-};
+}
 
 .img-bg-rodape{
   background: url(../img/rodape-bg.png) no-repeat center ; 
@@ -36,7 +36,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-};
+}
 
 :root {
   scroll-behavior: smooth;
