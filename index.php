@@ -88,10 +88,11 @@
       <div class="container">
         <div class="section-header">
           <h2>
-            <img src="assets/img/presentes/presentes.jpg" style="height:60px; margin-right:20px;" class="img-fluid animated">
+            <img src="assets/img/bebeverde.png" style="height:60px; margin-right:20px;" class="img-fluid animated">
             Minha Listinha
+            <img src="assets/img/beberoxo.png" style="height:60px; margin-right:20px;" class="img-fluid animated">
           </h2>
-          <p>Montei minha lojinha com tudo que vou precisar.<br>É só clicar e comprar <img src="assets/img/presentes/obrigado.png" style="height:50px;" class="img-fluid animated"></p>
+          <p>Montei minha lojinha com tudo que vou precisar.<br>É só clicar e comprar </p>
         </div>
 
         <?php
