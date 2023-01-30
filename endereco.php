@@ -17,7 +17,7 @@ Data/Hora
 </div>
 
 <p style="font-size: 31px;font-weight: 800;color: #b385d7;text-align:center;margin-bottom:0px">
-25/02/2023
+25/Fev/2023
     </p>
     <p style="font-size: 26px;font-weight: 800;color: #b385d7;text-align:center">
 Às 18H
