@@ -12,11 +12,31 @@
 # General
 --------------------------------------------------------------*/
 
-body{
-  background-image: url("../img/bg.jpg");
-  background-repeat: repeat;
+body {
+  background: url(../img/bg-qual2.jpg) no-repeat center fixed;
+  background-size: auto auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.img-bg-rodape-celular{
+  background: url(../img/rodape-bg-cl.png) no-repeat center ; 
+  background-size: auto auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+.img-bg-rodape{
+  background: url(../img/rodape-bg.png) no-repeat center ; 
+  background-size: auto auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 :root {
   scroll-behavior: smooth;
@@ -514,7 +534,7 @@ section {
 }
 @media (min-width: 992px) {
   .hero-animated .animated {
-    max-width: 45%;
+    max-width: 75%;
   }
 }
 @media (max-width: 991px) {
@@ -2639,14 +2659,7 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.footer {
-  color: var(--color-white);
-  font-size: 14px;
-}
-.footer .footer-content {
-  background: var(--color-secondary);
-  padding: 60px 0 30px 0;
-}
+
 .footer .footer-content .footer-info {
   margin-bottom: 30px;
 }

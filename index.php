@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/logofavicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -48,6 +48,8 @@
 </head>
 
 <body>
+
+
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -57,26 +59,39 @@
 
   <!-- ======= Header ======= -->
 
+
   <section id="hero-animated" class="hero-animated d-flex align-items-center mt-3">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-        <h2>Olá Tio Tamer</h2>
-        <img src="assets/img/cegonha.png" class="img-fluid animated">
-        <p>Estou chegando em breve para a alegria de meus pais. <br>
-            Quero te convidar para compartilhar esse momento incrível.</p>
-    </div>
+        <h2 style="font-size:50px;color:#eee; text-shadow: 2px 2px 5px #000;font-weight: 800"><b>Chá 
+          Revelação </b></h2>
+       
+       <div class="d-none d-sm-block">
+          <img src="assets/img/cegonha4.png" class="img-fluid animated">
+</div>
+
+  <div class="d-block d-sm-none" >
+          <img style="margin-bottom:0px" src="assets/img/cegonhaverde.png" class="img-fluid animated">
+          <img style="height:75px;margin-bottom:0px;margin-top:0px" src="assets/img/cegonhainter.png" class="img-fluid animated">
+          <img src="assets/img/cegonharoxa.png" class="img-fluid animated">
+
+</div>
+
+
   </section>
 
   <main id="main">
 
     <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
+    <section style="padding:0px" id="featured-services" class="featured-services">
       <div class="container">
         <div class="section-header">
-          <h2>
-            <img src="assets/img/presentes/presentes.jpg" style="height:60px; margin-right:20px;" class="img-fluid animated">
-            Minha Listinha
+          <h2 style="margin-bottom:0px;font-weight:bold;text-shadow: 1px 1px 5px #fff;color: #6e6e6e;" style=" margin-bottom:0px;">           
+            Minha Listinha          
           </h2>
-          <p>Montei minha lojinha com tudo que vou precisar.<br>É só clicar e comprar <img src="assets/img/presentes/obrigado.png" style="height:50px;" class="img-fluid animated"></p>
+
+<img src="assets/img/titulolista.png" style="height:100px; margin-right:0px;" class="img-fluid animated">
+         
+<p style="margin-bottom:0px;font-weight:bold;text-shadow: 1px 1px 5px #fff;color: #6e6e6e;">Montei minha lojinha com tudo que vou precisar.<br>É só clicar e comprar </p>
         </div>
 
         <?php
@@ -189,21 +204,48 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-
-
+ <br>
+ 
+ <div class=" img-bg-rodape d-none d-sm-block">
+  <footer id="footer" class="footer ">
     <div class="footer-legal text-center" style="min-height:80px; background-color:rgb(0,0,0, 0.1); color:#5d5d5d">
       <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
         <div>
-            <p>Rua 37, Qd 50, Parque Dez, CEP:69000-987</p>
-            <p>contato@gmail.com</p>
-            <a href="#" class="read-more align-self-start agenda" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><span>Painel de Controle</span> <i class="bi bi-arrow-right"></i></a>
+      
+            <a href="#" class="read-more align-self-start agenda"
+             type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <img src="assets/img/botaoinforma.png" style="height:75px; margin-right:0px;"  class="img-fluid animated">
+
+
+            </a>
+              
         </div>
       </div>
     </div>
 
-  </footer><!-- End Footer -->
+  </footer>
+ </div>
+
+<div class=" img-bg-rodape-celular d-block d-sm-none">
+  <footer id="footer" class="footer">
+    <div class="footer-legal text-center" style="min-height:80px; background-color:rgb(0,0,0, 0.1); color:#5d5d5d">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
+        <div>
+        <a href="#" class="read-more align-self-start agenda"
+             type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <img src="assets/img/botaoinforma.png" style="height:75px; margin-right:0px;"  class="img-fluid animated">
+
+
+            </a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+          </div>
+  <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
