@@ -48,7 +48,7 @@
                 ?>
                 <tr>
                   <td style="white-space: nowrap; text-align:right; font-weight:bold;" colspan="4">Total Arrecadado</td>
-                  <td style="white-space: nowrap; text-align:right; font-weight:bold;"><?=$TotalArrecadado?></td>
+                  <td style="white-space: nowrap; text-align:left; font-weight:bold;"><?=$TotalArrecadado?></td>
                 </tr>
               </tbody>
             </table>
