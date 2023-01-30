@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+    include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -161,21 +163,27 @@
             ],
 
 
-        ]
+          ];
+
+
+        $query = "select * from produtos order by categoria";
+        $result = mysqli_query($con, $query);
+
         ?>
 
 
         <div class="row gy-4">
           <?php
-            foreach($p as $i => $v){
+            // foreach($p as $i => $v){
+            while($d = mysqli_fetch_object($result)){
           ?>
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
             <div class="service-item position-relative w-100" style="border:solid 2px #eee; border-radius:15px;">
-              <h6><a href="" class="stretched-link"><i class="bi bi-gift-fill"></i> <?=$v['nome']?></a></h6>
+              <h6><a href="" class="stretched-link"><i class="bi bi-gift-fill"></i> <?=$d->produto?></a></h6>
               <div class="icon justify-content-center align-items-center text-center w-100"
                 style="
                         height:250px;
-                        background-image:url(assets/img/presentes/<?=$v['imagem']?>);
+                        background-image:url(<?=$localPainel?>src/volume/produtos/<?=$d->imagem?>);
                         background-size:contain;
                         background-position: center;
                         background-repeat:no-repeat;
@@ -186,8 +194,8 @@
                 <!-- <i class="bi bi-activity icon"></i> -->
               </div>
               <div class="d-flex flex-row justify-content-between position-relative">
-                <button class="btn btn-outline-warning btn-sm" style="border:0"><i class="bi bi-speedometer" style="font-size:30px"></i><br><span style="font-weight:bold"> <?=$v['estoque'].(($v['estoque'] > 1)?' Itens':' Item')?></span></button>
-                <button class="btn btn-outline-success btn-sm" style="border:0"><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">R$ <?=number_format($v['valor'],2,',','.')?></span></button>
+                <button class="btn btn-outline-warning btn-sm" style="border:0"><i class="bi bi-speedometer" style="font-size:30px"></i><br><span style="font-weight:bold"> <?=$d->estoque.(($d->estoque > 1)?' Itens':' Item')?></span></button>
+                <button class="btn btn-outline-success btn-sm" style="border:0"><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">R$ <?=number_format($d->valor,2,',','.')?></span></button>
               </div>
             </div>
           </div><!-- End Service Item -->
