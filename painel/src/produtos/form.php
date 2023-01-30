@@ -77,7 +77,7 @@
     <form id="acaoMenu<?=$md5?>">
       <h5><?=$_SESSION['categoriaProdutoNome']?></h5>
       <div class="form-floating mb-3">
-        <input <?=(($d->vendas or $d->estoque)?'disabled="disabled"':false)?> type="text" class="form-control" id="produto" name="produto" placeholder="Título do Produto" value="<?=$d->produto?>">
+        <input <?=(($d->vendas)?'disabled="disabled"':false)?> type="text" class="form-control" id="produto" name="produto" placeholder="Título do Produto" value="<?=$d->produto?>">
         <label for="produto">Presente</label>
         <div class="form-text">Digite o nome do presente.</div>
       </div>
@@ -87,7 +87,7 @@
       </div>
 
       <!-- <div class="form-floating"> -->
-        <input <?=(($d->vendas or $d->estoque)?'disabled="disabled"':false)?> type="file" class="form-control" placeholder="Banner">
+        <input <?=(($d->vendas)?'disabled="disabled"':false)?> type="file" class="form-control" placeholder="Banner">
         <input type="hidden" id="base64" name="base64" value="" />
         <input type="hidden" id="imagem_tipo" name="imagem_tipo" value="" />
         <input type="hidden" id="imagem_nome" name="imagem_nome" value="" />
