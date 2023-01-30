@@ -33,7 +33,7 @@
     <div class="row">
       <div class="col">
         <div class="card">
-          <h5 class="card-header">Lista de Itens (<?=$_SESSION['categoriaProdutoNome']?>)</h5>
+          <h5 class="card-header">Lista de Presentes (<?=$_SESSION['categoriaProdutoNome']?>)</h5>
           <div class="card-body">
             <div style="display:flex; justify-content:end">
 
@@ -55,10 +55,10 @@
             <table class="table table-striped table-hover">
               <thead>
                 <tr>
-                  <th scope="col" style="width:100%">Item</th>
+                  <th scope="col" style="width:100%">Presente</th>
                   <th scope="col">Valor</th>
-                  <th scope="col servico">Tempo</th>
-                  <th scope="col">Estoque</th>
+                  <th scope="col servico">Vendas</th>
+                  <th scope="col">Quantidade</th>
                   <th scope="col">Situação</th>
                   <th scope="col">Ações</th>
                 </tr>
@@ -73,7 +73,7 @@
                   <td style="white-space: nowrap;"><?=$d->produto?></td>
 
                   <td style="white-space: nowrap;">R$ <?=number_format($d->valor,2,',','.')?></td>
-                  <td style="white-space: nowrap;"><?=$d->tempo?> min</td>
+                  <td style="white-space: nowrap;"><?=$d->vendas?></td>
                   <td style="white-space: nowrap;"><?=$d->estoque?></td>
 
                   <td style="white-space: nowrap;">
@@ -85,9 +85,9 @@
                   </td>
                   <td style="white-space: nowrap;">
 
-                    <button class="btn btn-success btn-sm" estoque="<?=$d->codigo?>" produto="<?=$d->produto?>">
+                    <!-- <button class="btn btn-success btn-sm" estoque="<?=$d->codigo?>" produto="<?=$d->produto?>">
                       <i class="fa-solid fa-dolly"></i> Estoque
-                    </button>
+                    </button> -->
 
                     <button
                       class="btn btn-primary btn-sm"
