@@ -62,9 +62,9 @@
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center mt-3">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-        <h2 style="font-size:50px;color:#eee; text-shadow: 2px 2px 5px #000;font-weight: 800"><b>Chá 
+        <h2 style="font-size:50px;color:#eee; text-shadow: 2px 2px 5px #000;font-weight: 800"><b>Chá
           Revelação </b></h2>
-       
+
        <div class="d-none d-sm-block">
           <img src="assets/img/cegonha4.png" class="img-fluid animated">
 </div>
@@ -85,12 +85,12 @@
     <section style="padding:0px" id="featured-services" class="featured-services">
       <div class="container">
         <div class="section-header">
-          <h2 style="margin-bottom:0px;font-weight:bold;text-shadow: 1px 1px 5px #fff;color: #6e6e6e;" style=" margin-bottom:0px;">           
-            Minha Listinha          
+          <h2 style="margin-bottom:0px;font-weight:bold;text-shadow: 1px 1px 5px #fff;color: #6e6e6e;" style=" margin-bottom:0px;">
+            Minha Listinha
           </h2>
 
 <img src="assets/img/titulolista.png" style="height:100px; margin-right:0px;" class="img-fluid animated">
-         
+
 <p style="margin-bottom:0px;font-weight:bold;text-shadow: 1px 1px 5px #fff;color: #6e6e6e;">Montei minha lojinha com tudo que vou precisar.<br>É só clicar e comprar </p>
         </div>
 
@@ -205,13 +205,13 @@
 
   <!-- ======= Footer ======= -->
  <br>
- 
+
  <div class=" img-bg-rodape d-none d-sm-block">
   <footer id="footer" class="footer ">
     <div class="footer-legal text-center" style="min-height:80px; background-color:rgb(0,0,0, 0.1); color:#5d5d5d">
       <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
         <div>
-      
+
             <a href="#" class="read-more align-self-start agenda"
              type="button" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
@@ -219,7 +219,7 @@
 
 
             </a>
-              
+
         </div>
       </div>
     </div>
@@ -282,6 +282,9 @@
       url:"endereco.php",
       success:function(dados){
         $(".LateralDireita").html(dados);
+      },
+      error:function(){
+        alert('erro')
       }
     })
 
