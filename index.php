@@ -67,12 +67,15 @@
         <h2 style="font-size:50px;color:#eee; text-shadow: 2px 2px 5px #000;font-weight: 800"><b>Chá 
           Revelação </b></h2>
        
-       <div>
+       <div class="d-none d-sm-block">
           <img src="assets/img/cegonha4.png" class="img-fluid animated">
 </div>
 
-  <div class="d-none d-sm-block">
-          <img src="assets/img/cegonha4.png" class="img-fluid animated">
+  <div class="d-block d-sm-none" >
+          <img src="assets/img/cegonhaverde.png" class="img-fluid animated">
+          <br>
+          <img src="assets/img/cegonharoxo.png" class="img-fluid animated">
+
 </div>
 
 
