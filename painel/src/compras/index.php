@@ -37,7 +37,7 @@
                 <tr>
                   <td style="white-space: nowrap;"><?=$d->convidado?></td>
                   <!-- <td style="white-space: nowrap;"><?=$d->cpf?></td> -->
-                  <td style="white-space: nowrap;"><?=$d->nome_categoria?><br><?=$d->nome_produto?></td>
+                  <td style="white-space: nowrap;"><i><?=$d->nome_categoria?></i><br><?=$d->nome_produto?></td>
                   <td style="white-space: nowrap;">R$ <?=number_format($d->valor_unitario, 2, ',','.')?></td>
                   <td style="white-space: nowrap;"><?=$d->quantidade?></td>
                   <td style="white-space: nowrap;">R$ <?=number_format($d->valor, 2, ',','.')?></td>
