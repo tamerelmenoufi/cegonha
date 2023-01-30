@@ -6,3 +6,12 @@ Ola,você entre muitas pessoas<br> foi escolhido(a) para <br>participar dessa de
 Conto com sua presença!
 
  </p></center>
+
+ <div class="container">
+
+<div class="" style="background:#8ccd84;padding:8px;">
+<center>
+Data/Hora
+</center>
+</div>
+ </div>
