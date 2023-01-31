@@ -57,7 +57,7 @@
               </thead>
               <tbody>
                 <?php
-                  $query = "select * from produtos_categorias order by categoria asc";
+                  $query = "select a.*, (select count(*) from produtos where categoria = a.codigo) as qt from produtos_categorias a order by a.categoria asc";
                   $result = mysqli_query($con, $query);
                   while($d = mysqli_fetch_object($result)){
                 ?>
@@ -73,7 +73,7 @@
                   <td style="white-space: nowrap;">
 
                     <button class="btn btn-success btn-sm" produtos="<?=$d->codigo?>" categoria="<?=$d->categoria?>">
-                    <i class="fa-solid fa-box-open"></i> Presentes
+                    <i class="fa-solid fa-box-open"></i> Presentes (<?=$d->qt?>)
                     </button>
 
                     <button
