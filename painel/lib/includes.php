@@ -7,8 +7,13 @@
     $localPainel = $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["HTTP_HOST"]."/";
     $localSite = $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["HTTP_HOST"]."/";
 
-    $localPainel = "http://146.190.52.49:8081/app/cegonha/painel/";
-    $localSite = "http://146.190.52.49:8081/app/cegonha/";
+    // $localPainel = "http://146.190.52.49:8081/app/cegonha/painel/";
+    // $localSite = "http://146.190.52.49:8081/app/cegonha/";
+
+
+    $localPainel = "http://project.mohatron.com/cegonha/painel/";
+    $localSite = "http://project.mohatron.com/cegonha/";
+
 
     include("/appinc/connect.php");
     $con = AppConnect('cegonha');
