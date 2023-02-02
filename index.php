@@ -195,7 +195,7 @@
               </div>
               <div class="d-flex flex-row justify-content-between position-relative">
                 <button class="btn btn-outline-warning btn-sm" style="border:0">Preciso de<br><i class="bi bi-speedometer" style="font-size:30px"></i><br><span style="font-weight:bold"> <?=$d->estoque.(($d->estoque > 1)?' Itens':' Item')?></span></button>
-                <button class="btn btn-outline-success btn-sm" style="border:0">Comprar<br><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">R$ <?=number_format($d->valor,2,',','.')?></span><span style="font-size:9px">/cada</span></button>
+                <button class="btn btn-outline-success btn-sm" style="border:0">Comprar<br><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">R$ <?=number_format($d->valor,2,',','.')?></span><span style="font-size:9px">/Un.</span></button>
               </div>
             </div>
           </div><!-- End Service Item -->
