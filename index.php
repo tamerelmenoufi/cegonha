@@ -194,8 +194,8 @@
                 <!-- <i class="bi bi-activity icon"></i> -->
               </div>
               <div class="d-flex flex-row justify-content-between position-relative">
-                <button class="btn btn-outline-warning btn-sm" style="border:0"><i class="bi bi-speedometer" style="font-size:30px"></i><br><span style="font-weight:bold"> Preciso de<br><?=$d->estoque.(($d->estoque > 1)?' Itens':' Item')?></span></button>
-                <button class="btn btn-outline-success btn-sm" style="border:0"><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">Comprar<br>R$ <?=number_format($d->valor,2,',','.')?></span></button>
+                <button class="btn btn-outline-warning btn-sm" style="border:0">Preciso de<br><i class="bi bi-speedometer" style="font-size:30px"></i><br><span style="font-weight:bold"> <?=$d->estoque.(($d->estoque > 1)?' Itens':' Item')?></span></button>
+                <button class="btn btn-outline-success btn-sm" style="border:0">Comprar<br><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">R$ <?=number_format($d->valor,2,',','.')?></span></button>
               </div>
             </div>
           </div><!-- End Service Item -->
