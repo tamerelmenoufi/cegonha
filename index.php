@@ -179,7 +179,14 @@
           ?>
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
             <div class="service-item position-relative w-100" style="border:solid 2px #eee; border-radius:15px;">
-              <h6><a href="" class="stretched-link"><i class="bi bi-gift-fill"></i> <?=$d->produto?></a></h6>
+              <h6><a
+                    href="#XXX"
+                    class="stretched-link"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"
+                    produto="<?=$d->codigo?>"
+                  ><i class="bi bi-gift-fill"></i> <?=$d->produto?></a></h6>
               <div class="icon justify-content-center align-items-center text-center w-100"
                 style="
                         height:250px;
