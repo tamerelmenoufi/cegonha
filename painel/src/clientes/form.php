@@ -73,10 +73,10 @@
                     <input type="text" name="telefone" id="telefone" class="form-control" placeholder="telefone" value="<?=$d->telefone?>">
                     <label for="telefone">Telefone*</label>
                 </div>
-                <div class="form-floating mb-3">
+                <!-- <div class="form-floating mb-3">
                     <input type="text" name="email" id="email" class="form-control" placeholder="E-mail" value="<?=$d->email?>">
                     <label for="email">E-mail</label>
-                </div>
+                </div> -->
 
             </div>
         </div>
