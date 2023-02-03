@@ -297,7 +297,7 @@
 
   $(function(){
       $.ajax({
-        url:"endereco.php",
+        url:"src/endereco.php",
         success:function(dados){
           $(".LateralDireita").html(dados);
         },
@@ -305,6 +305,20 @@
           alert('erro')
         }
       })
+
+
+      $(".produto").click(function(){
+        $.ajax({
+          url:"src/comanda.php",
+          success:function(dados){
+            $(".LateralDireita").html(dados);
+          },
+          error:function(){
+            alert('erro')
+          }
+        })
+      })
+
     })
 
 
