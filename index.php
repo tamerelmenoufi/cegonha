@@ -328,7 +328,7 @@
           },
           success:function(dados){
             $(".LateralDireita").html(dados);
-            $(`div[blq${produto}]`).css("display","none");
+            $(`div[blq${produto}]`).css("display","inline");
           },
           error:function(){
             alert('erro')
