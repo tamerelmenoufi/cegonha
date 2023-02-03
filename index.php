@@ -35,7 +35,7 @@
         $result = mysqli_query($con, $query);
         $blq = [];
         while($d = mysqli_fetch_object($result)){
-          $blq = $d->produto;
+          $blq[] = $d->produto;
         }
     }
 
