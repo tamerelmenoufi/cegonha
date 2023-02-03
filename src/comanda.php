@@ -126,8 +126,10 @@
 
 
     <div class="row justify-content-between">
-        <div class="col-12">
+        <div class="col-1">
             <i class="bi bi-trash3 excluirItem" style="cursor:pointer; color:red; font-weight:bold;" codigo="<?=$d->codigo?>" produto="<?=$d->produto_nome?>"></i>
+        </div>
+        <div class="col-11">
             <?=$d->produto_nome?><br><small><?=$d->categoria_nome?> (<?=$d->tipo_nome?>)</small>
         </div>
     </div>
