@@ -177,6 +177,7 @@
 
         <div class="row gy-4">
           <?php
+          print_r($blq);
             // foreach($p as $i => $v){
             while($d = mysqli_fetch_object($result)){
           ?>
