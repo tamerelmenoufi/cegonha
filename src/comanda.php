@@ -235,7 +235,18 @@
 <script>
     $(function(){
 
+        <?php
+        if($QtProd){
+        ?>
         $(".QtProd").html("<?=$QtProd?>");
+        <?php
+        }else{
+        ?>
+        $(".QtProd").css("opacity","0");
+        <?php
+        }
+        ?>
+
 
 
         $(".atualizar").change(function(){
