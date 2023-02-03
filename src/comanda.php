@@ -275,7 +275,7 @@
             cod_produto = $(this).attr("cod_produto");
             produto = $(this).attr("produto");
 
-            $(`div[blq${cod_produto}]`).css("display","none");
+
 
             $.confirm({
                 content:`Deseja realmente excluir o <b>${produto}</b>?`,
@@ -292,6 +292,7 @@
                             },
                             success:function(dados){
                                 $(".LateralDireita").html(dados);
+                                $(`div[blq${cod_produto}]`).css("display","none");
                             }
                         });
                     },
