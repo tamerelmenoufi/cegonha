@@ -248,7 +248,7 @@
     <div class="footer-legal text-center" style="min-height:80px; background-color:rgb(0,0,0, 0.1); color:#5d5d5d">
       <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
         <div>
-        <a href="#" class="read-more align-self-start agenda"
+        <a href="#XXX" class="read-more align-self-start informacoes"
              type="button" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
               <img src="assets/img/botaoinforma.png" style="height:75px; margin-right:0px;"  class="img-fluid animated">
@@ -296,6 +296,9 @@
     }
 
   $(function(){
+
+    $(".informacoes").click(function(){
+      $(".LateralDireita").html('');
       $.ajax({
         url:"src/endereco.php",
         success:function(dados){
@@ -305,10 +308,12 @@
           alert('erro')
         }
       })
+    })
 
 
       $("a[produto]").click(function(){
         produto = $(this).attr("produto");
+        $(".LateralDireita").html('');
         $.ajax({
           url:"src/comanda.php",
           type:"POST",
