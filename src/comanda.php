@@ -88,7 +88,7 @@
 <h4 class="Titulo<?=$md5?>"><i class="fa-solid fa-receipt"></i> Comanda da compra</h4>
 <div class="p-3" style="font-size:12px;">
     <div class="row justify-content-between" style="margin-bottom:10px;">
-    <div class="col-4">
+    <div class="col-5">
         <b>Descrição</b>
     </div>
     <div class="col-2">
