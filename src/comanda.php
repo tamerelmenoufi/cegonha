@@ -245,6 +245,7 @@
         }else{
         ?>
         $(".QtProd").css("opacity","0");
+        $("button[comanda]").css("opacity","0");
         <?php
         }
         ?>
@@ -293,7 +294,6 @@
                             success:function(dados){
                                 $(".LateralDireita").html(dados);
                                 $(`div[blq${cod_produto}]`).css("display","none");
-                                $("button[comanda]").css("opacity","0");
                             }
                         });
                     },
