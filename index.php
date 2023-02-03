@@ -228,7 +228,7 @@
       <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
         <div>
 
-            <a href="#" class="read-more align-self-start agenda"
+            <a href="#" class="read-more align-self-start informacoes"
              type="button" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
               <img src="assets/img/botaoinforma.png" style="height:75px; margin-right:0px;"  class="img-fluid animated">
