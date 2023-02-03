@@ -31,7 +31,7 @@
                             from vendas_produtos a
                                 left join produtos p on a.produto = p.codigo
                                 left join produtos_categorias c on p.categoria = c.codigo
-                            where a.venda = '{$_SESSION['codVenda']}' group by a.produto";
+                            where a.venda = '{$_SESSION['codVenda']}'";
         $result = mysqli_query($con, $query);
         $blq = [];
         while($d = mysqli_fetch_object($result)){
