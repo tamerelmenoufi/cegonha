@@ -240,11 +240,10 @@
         <?php
         if($QtProd){
         ?>
-        $(".QtProd span").html("<?=$QtProd?>");
+        $(".QtProd").html("<?=$QtProd?>");
         <?php
         }else{
         ?>
-        $(".QtProd").css("opacity","0");
         $("button[comanda]").css("opacity","0");
         <?php
         }
