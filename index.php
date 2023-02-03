@@ -179,7 +179,6 @@
           <?php
             // foreach($p as $i => $v){
             while($d = mysqli_fetch_object($result)){
-              echo in_array($d->codigo,$blq);
 
           ?>
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
