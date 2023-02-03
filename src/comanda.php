@@ -2,7 +2,7 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 
     if($_SESSION['convidado']){
-        $query = "select a.*,
+        echo $query = "select a.*,
             (select codigo from vendas where cliente = a.codigo and situacao = 'n' and deletado != '1') as venda,
         from clientes a where a.codigo = '{$_SESSION['convidado']}'";
         $result = mysqli_query($con, $query);
