@@ -232,10 +232,9 @@
 <script>
     $(function(){
 
-        Carregando('none');
 
         $(".atualizar").change(function(){
-            Carregando();
+
             codigo = $(this).attr("produto");
             quantidade = $(this).val();
             $.ajax({
@@ -293,7 +292,6 @@
                 return false;
             }
             if(!(valor*1)) return false;
-            Carregando();
             $.ajax({
                 type:"POST",
                 data:{
@@ -314,7 +312,7 @@
 
             codigo = $(this).attr("cod");
             forma_pagamento = $('#forma_pagamento').val();
-            Carregando();
+
             $.ajax({
                 type:"POST",
                 data:{
