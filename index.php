@@ -152,14 +152,20 @@
             while($d = mysqli_fetch_object($result)){
           ?>
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
-            <div class="service-item position-relative w-100" style="border:solid 2px #eee; border-radius:15px; <?=((@in_array($d->codigo,$blq))?"background:#000; opacity:0.3;":false)?>">
+            <div class="service-item position-relative w-100" style="border:solid 2px #eee; border-radius:15px; <?=((@in_array($d->codigo,$blq))?"background:#fff; opacity:0.3;":false)?>">
               <h6><a
                     href="#XXX"
                     class="stretched-link"
+                    <?php
+                    if(!@in_array($d->codigo,$blq)){
+                    ?>
                     data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasRight"
                     aria-controls="offcanvasRight"
                     produto="<?=$d->codigo?>"
+                    <?php
+                    }
+                    ?>
                   ><i class="bi bi-gift-fill"></i> <?=$d->produto?></a></h6>
               <div class="icon justify-content-center align-items-center text-center w-100"
                 style="
