@@ -1,5 +1,9 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
+
+
+    $_SESSION['convidado'] = '8';
+
 ?><!DOCTYPE html>
 <html lang="en">
 
