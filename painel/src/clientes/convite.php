@@ -22,10 +22,10 @@ $html = '<!DOCTYPE html>
         }
         .corpo img[qrcode]{
             position:absolute;
-            width:100px;
-            height:100px;
+            width:300px;
+            height:300px;
             left:calc(50% - 50px);
-            top:900px;
+            top:700px;
         }
     </style>
 </head>
