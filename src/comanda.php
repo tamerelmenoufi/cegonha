@@ -240,7 +240,7 @@
         <?php
         if($QtProd){
         ?>
-        $(".QtProd").html("<?=$QtProd?>");
+        $(".QtProd span").html("<?=$QtProd?>");
         <?php
         }else{
         ?>
@@ -275,8 +275,6 @@
             codigo = $(this).attr("codigo");
             cod_produto = $(this).attr("cod_produto");
             produto = $(this).attr("produto");
-
-
 
             $.confirm({
                 content:`Deseja realmente excluir o <b>${produto}</b>?`,
