@@ -127,6 +127,7 @@
 
     <div class="row justify-content-between">
         <div class="col-12">
+            <i class="bi bi-trash3 excluirItem" style="cursor:pointer; color:red; font-weight:bold;" codigo="<?=$d->codigo?>" produto="<?=$d->produto_nome?>"></i>
             <?=$d->produto_nome?><br><small><?=$d->categoria_nome?> (<?=$d->tipo_nome?>)</small>
         </div>
     </div>
@@ -251,6 +252,35 @@
                 },
                 success:function(dados){
                     $(".LateralDireita").html(dados);
+                }
+            });
+
+        });
+
+        $(".excluirItem").click(function(){
+            codigo = $(this).attr("codigo");
+            produto = $(this).attr("produto");
+            $.confirm({
+                content:`Deseja realmente excluir o <b>${produto}</b>?`,
+                title:"Alerta!",
+                buttons:{
+                    'SIM':function(){
+                        $.ajax({
+                            url:"src/comanda.php",
+                            type:"POST",
+                            data:{
+                                codigo,
+                                produto,
+                                acao:'excluir'
+                            },
+                            success:function(dados){
+                                $(".LateralDireita").html(dados);
+                            }
+                        });
+                    },
+                    'NÃO':function(){
+
+                    }
                 }
             });
 
