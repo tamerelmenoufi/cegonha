@@ -328,6 +328,7 @@
           success:function(dados){
             $(".LateralDireita").html(dados);
             $(`div[blq${produto}]`).css("display","inline");
+            $("button[comanda]").css("opacity":"0.7");
           },
           error:function(){
             alert('erro')

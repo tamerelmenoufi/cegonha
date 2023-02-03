@@ -293,6 +293,7 @@
                             success:function(dados){
                                 $(".LateralDireita").html(dados);
                                 $(`div[blq${cod_produto}]`).css("display","none");
+                                $("button[comanda]").css("opacity":"0");
                             }
                         });
                     },
