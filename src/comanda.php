@@ -139,8 +139,6 @@
             R$ <?=number_format($d->valor_unitario,2,',','.')?>
         </div>
         <div class="col-2">
-
-
         <select class="form-select form-select-sm" aria-label=".form-select-sm example">
             <?php
             for($i=1;$i<=$d->estoque;$i++){
@@ -150,8 +148,6 @@
             }
             ?>
         </select>
-
-            <?=$d->quantidade?>
         </div>
         <div class="col-2">
             R$ <?=number_format($d->valor,2,',','.')?>
