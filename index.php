@@ -93,7 +93,7 @@
 <body>
 
 
-<button comanda class="btn btn-primary" style="position:fixed; top:10px; right:10px; opacity:<?=((count($blq))?'0.7':'0')?>;">
+<button comanda class="btn btn-primary" style="position:fixed; top:10px; right:10px; z-index:9; opacity:<?=((count($blq))?'0.7':'0')?>;">
   <i class="bi bi-cart"></i><br>
   Carrinho de compras
 </button>
