@@ -127,7 +127,7 @@
 
     <div class="row justify-content-between">
         <div class="col-1">
-            <i class="bi bi-trash3 excluirItem" style="cursor:pointer; color:red; font-weight:bold;" codigo="<?=$d->codigo?>" produto="<?=$d->produto_nome?>"></i>
+            <i class="bi bi-trash3 excluirItem" style="cursor:pointer; color:red; font-weight:bold;" codigo="<?=$d->codigo?>" produto="<?=$d->produto_nome?>" cod_produto="<?=$d->produto?>" ></i>
         </div>
         <div class="col-11">
             <?=$d->produto_nome?><br><small><?=$d->categoria_nome?> (<?=$d->tipo_nome?>)</small>
@@ -272,6 +272,7 @@
 
         $(".excluirItem").click(function(){
             codigo = $(this).attr("codigo");
+            cod_produto = $(this).attr("cod_produto");
             produto = $(this).attr("produto");
 
             $(`div[blq${produto}]`).css("display","inline");
