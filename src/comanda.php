@@ -274,7 +274,7 @@
             codigo = $(this).attr("codigo");
             produto = $(this).attr("produto");
 
-            $(".blq").css("display","none");
+            $(`div[blq${produto}]`).css("display","inline");
 
             $.confirm({
                 content:`Deseja realmente excluir o <b>${produto}</b>?`,

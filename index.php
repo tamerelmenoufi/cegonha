@@ -177,7 +177,6 @@
 
         <div class="row gy-4">
           <?php
-          print_r($blq);
             // foreach($p as $i => $v){
             while($d = mysqli_fetch_object($result)){
               echo in_array($d->codigo,$blq);
@@ -185,7 +184,7 @@
           ?>
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
             <div class="service-item position-relative w-100" style="border:solid 2px #eee; border-radius:15px;">
-              <div class="bloq" style="<?=((!@in_array($d->codigo,$blq))?"display:none;":"display:inline;")?>"></div>
+              <div blq<?=$d->codigo?> class="bloq" style="<?=((!@in_array($d->codigo,$blq))?"display:none;":"display:inline;")?>"></div>
               <h6><a
                     href="#XXX"
                     class="stretched-link"
@@ -329,7 +328,7 @@
           },
           success:function(dados){
             $(".LateralDireita").html(dados);
-            $("button[comanda]").css("opacity","0.7");
+            $(`div[blq${produto}]`).css("display","none");
           },
           error:function(){
             alert('erro')
