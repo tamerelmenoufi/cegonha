@@ -3,7 +3,7 @@
 
     if($_SESSION['convidado']){
         echo $query = "select a.*,
-            (select codigo from vendas where cliente = a.codigo and situacao = 'n' and deletado != '1') as venda,
+            (select codigo from vendas where cliente = a.codigo and situacao = 'n' and deletado != '1') as venda
         from clientes a where a.codigo = '{$_SESSION['convidado']}'";
         $result = mysqli_query($con, $query);
         $d = mysqli_fetch_object($result);
