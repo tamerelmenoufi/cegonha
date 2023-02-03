@@ -259,7 +259,6 @@
 
 
 
-        $('#valor_add').maskMoney();
 
         <?php
         if(!($resto*1)){
