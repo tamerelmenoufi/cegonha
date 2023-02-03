@@ -139,7 +139,7 @@
             R$ <?=number_format($d->valor_unitario,2,',','.')?>
         </div>
         <div class="col-2">
-        <select class="form-select form-select-sm ataulizar" produto="<?=$d->codigo?>" aria-label=".form-select-sm example">
+        <select class="form-select form-select-sm atualizar" produto="<?=$d->codigo?>" aria-label=".form-select-sm example">
             <?php
             for($i=1;$i<=$d->estoque;$i++){
             ?>
