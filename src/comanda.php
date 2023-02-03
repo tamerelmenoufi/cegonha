@@ -119,6 +119,7 @@
                 $n = mysqli_num_rows($result);
                 $tipo_produtos = false;
                 $total = 0;
+                $QtProd = 0;
                 while($d = mysqli_fetch_object($result)){
                     if($d->tipo == 'p') $tipo_produtos = true;
     ?>
@@ -156,6 +157,7 @@
 
     <?php
             $total = ($total + $d->valor);
+            $QtProd = ($QtProd + $d->quantidade);
                 }
     ?>
 
@@ -231,6 +233,8 @@
 
 <script>
     $(function(){
+
+        $(".QtProd").html("<?=$QtProd?>");
 
 
         $(".atualizar").change(function(){

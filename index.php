@@ -100,7 +100,7 @@
         data-bs-target="#offcanvasRight"
         aria-controls="offcanvasRight"
         style="position:fixed; top:10px; right:10px; z-index:9; font-weight:bold; opacity:<?=((count($blq))?'0.7':'0')?>;">
-  <?=count($blq)?> <i class="bi bi-cart"></i><br>
+  <span class="QtProd"><?=count($blq)?></span> <i class="bi bi-cart"></i><br>
   Compras
 </button>
 
