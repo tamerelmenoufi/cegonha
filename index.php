@@ -180,6 +180,8 @@
           print_r($blq);
             // foreach($p as $i => $v){
             while($d = mysqli_fetch_object($result)){
+              echo in_array($d->codigo,$blq);
+
           ?>
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
             <div class="service-item position-relative w-100" style="border:solid 2px #eee; border-radius:15px;">
