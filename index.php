@@ -93,6 +93,13 @@
 <body>
 
 
+<button comanda class="btn btn-primary" style="position:fixed; top:10px; right:10px; opacity:<?=((count($blq))?'0.7':'0')?>;">
+  <i class="fa-solid fa-cart-flatbed-suitcase"></i><br>
+  Carrinho de compras
+</button>
+
+
+
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -300,6 +307,20 @@
           data:{
             codProduto:produto,
           },
+          success:function(dados){
+            $(".LateralDireita").html(dados);
+            $("button[comanda]").css("opacity","0.7");
+          },
+          error:function(){
+            alert('erro')
+          }
+        })
+      })
+
+      $("button[comanda]").click(function(){
+        $(".LateralDireita").html('');
+        $.ajax({
+          url:"src/comanda.php",
           success:function(dados){
             $(".LateralDireita").html(dados);
           },
