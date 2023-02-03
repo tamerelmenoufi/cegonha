@@ -139,7 +139,7 @@
             R$ <?=number_format($d->valor_unitario,2,',','.')?>
         </div>
         <div class="col-2">
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <select class="form-select form-select-sm ataulizar" produto="<?=$d->codigo?>" aria-label=".form-select-sm example">
             <?php
             for($i=1;$i<=$d->estoque;$i++){
             ?>
@@ -233,6 +233,32 @@
     $(function(){
 
         Carregando('none');
+
+        $(".atualizar").change(function(){
+            Carregando();
+            codigo = $(this).attr("produto");
+            quantidade = $(this).val();
+            $.ajax({
+                url:"src/comanda.php",
+                type:"POST",
+                data:{
+                    codigo,
+                    quantidade,
+                    acao:'atualizar'
+                },
+                success:function(dados){
+                    $(".LateralDireita").html(dados);
+                }
+            });
+
+        });
+
+
+
+
+
+
+
 
         $('#valor_add').maskMoney();
 
