@@ -75,16 +75,6 @@
         mysqli_query($con, $query);
     }
 
-
-    // $v = mysqli_fetch_object(mysqli_query($con, "select * from vendas where codigo = '{$_SESSION['codVenda']}'"));
-
-
-    $query = "select * from vendas where codigo = '{$_SESSION['codVenda']}'";
-    $result = mysqli_query($con, $query);
-    $v = mysqli_fetch_object($result);
-
-    $total = ($v->valor);
-
 ?>
 <style>
     .Titulo<?=$md5?>{
@@ -98,9 +88,6 @@
 <h4 class="Titulo<?=$md5?>"><i class="fa-solid fa-receipt"></i> Comanda da compra</h4>
 <div class="p-3" style="font-size:12px;">
     <div class="row justify-content-between" style="margin-bottom:10px;">
-    <div class="col-2">
-        <b>Cod</b>
-    </div>
     <div class="col-4">
         <b>Descrição</b>
     </div>
@@ -129,17 +116,14 @@
                             where a.venda = '{$_SESSION['codVenda']}'";
                 $result = mysqli_query($con, $query);
                 $n = mysqli_num_rows($result);
-                $valor = $comissao = 0;
                 $tipo_produtos = false;
+                $total = 0;
                 while($d = mysqli_fetch_object($result)){
                     if($d->tipo == 'p') $tipo_produtos = true;
     ?>
 
 
     <div class="row justify-content-between">
-        <div class="col-2">
-            <?=$d->cod_produto?>
-        </div>
         <div class="col-10">
             <?=$d->produto_nome?><br><small><?=$d->categoria_nome?> (<?=$d->tipo_nome?>)</small>
         </div>
@@ -164,18 +148,9 @@
     </div>
 
     <?php
+            $total = ($total + $d->valor);
                 }
     ?>
-
-    <div class="row justify-content-between" style="margin-top:10px;">
-        <div class="col-10 text-end">
-            VALOR
-        </div>
-
-        <div class="col-2">
-            R$ <?=number_format($v->valor,2,',','.')?>
-        </div>
-    </div>
 
     <div class="row justify-content-between">
         <div class="col-10 text-end">
