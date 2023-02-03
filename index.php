@@ -93,7 +93,13 @@
 <body>
 
 
-<button comanda class="btn btn-primary" style="position:fixed; top:10px; right:10px; z-index:9; font-weight:bold; opacity:<?=((count($blq))?'0.7':'0')?>;">
+<button
+        comanda
+        class="btn btn-primary"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+        style="position:fixed; top:10px; right:10px; z-index:9; font-weight:bold; opacity:<?=((count($blq))?'0.7':'0')?>;">
   <i class="bi bi-cart"></i><br>
   Compras
 </button>
