@@ -273,6 +273,9 @@
         $(".excluirItem").click(function(){
             codigo = $(this).attr("codigo");
             produto = $(this).attr("produto");
+
+            $(".blq").css("display","inline");
+
             $.confirm({
                 content:`Deseja realmente excluir o <b>${produto}</b>?`,
                 title:"Alerta!",

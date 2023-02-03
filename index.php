@@ -91,6 +91,20 @@
   <link href="<?=$localPainel?>lib/vendor/jquery-confirm-v3.3.4/dist/jquery-confirm.min.css" rel="stylesheet" >
   <script src="<?=$localPainel?>lib/vendor/jquery-confirm-v3.3.4/dist/jquery-confirm.min.js" ></script>
 
+
+    <style>
+      .bloq{
+        position:absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        z-index: 8;
+        background:#fff;
+        opacity: 0.7;
+      }
+    </style>
+
 </head>
 
 <body>
@@ -167,20 +181,15 @@
             while($d = mysqli_fetch_object($result)){
           ?>
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
-            <div class="service-item position-relative w-100" style="border:solid 2px #eee; border-radius:15px; <?=((@in_array($d->codigo,$blq))?"background:#fff; opacity:0.3;":false)?>">
+            <div class="service-item position-relative w-100" style="border:solid 2px #eee; border-radius:15px;">
+              <div class="bloq" style="<?=((@in_array($d->codigo,$blq))?"display:none;":"display:inline;")?>"></div>
               <h6><a
                     href="#XXX"
                     class="stretched-link"
-                    <?php
-                    if(!@in_array($d->codigo,$blq)){
-                    ?>
                     data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasRight"
                     aria-controls="offcanvasRight"
                     produto="<?=$d->codigo?>"
-                    <?php
-                    }
-                    ?>
                   ><i class="bi bi-gift-fill"></i> <?=$d->produto?></a></h6>
               <div class="icon justify-content-center align-items-center text-center w-100"
                 style="
@@ -196,8 +205,8 @@
                 <!-- <i class="bi bi-activity icon"></i> -->
               </div>
               <div class="d-flex flex-row justify-content-between position-relative">
-                <button <?=((@in_array($d->codigo,$blq))?'disabled':false)?> class="btn btn-outline-warning btn-sm" style="border:0">Preciso de<br><i class="bi bi-speedometer" style="font-size:30px"></i><br><span style="font-weight:bold"> <?=$d->estoque.(($d->estoque > 1)?' Itens':' Item')?></span></button>
-                <button <?=((@in_array($d->codigo,$blq))?'disabled':false)?> class="btn btn-outline-success btn-sm" style="border:0">Comprar<br><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">R$ <?=number_format($d->valor,2,',','.')?></span><span style="font-size:9px">/Item</span></button>
+                <button class="btn btn-outline-warning btn-sm" style="border:0">Preciso de<br><i class="bi bi-speedometer" style="font-size:30px"></i><br><span style="font-weight:bold"> <?=$d->estoque.(($d->estoque > 1)?' Itens':' Item')?></span></button>
+                <button class="btn btn-outline-success btn-sm" style="border:0">Comprar<br><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">R$ <?=number_format($d->valor,2,',','.')?></span><span style="font-size:9px">/Item</span></button>
               </div>
             </div>
           </div><!-- End Service Item -->
