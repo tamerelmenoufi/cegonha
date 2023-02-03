@@ -20,13 +20,19 @@ $html = '<!DOCTYPE html>
             left:0;
             top:0;
         }
-        .corpo img[qrcode]
+        .corpo img[qrcode]{
+            position:absolute;
+            width:100px;
+            height:100px;
+            left:calc(50% - 50px);
+            top:900px;
+        }
     </style>
 </head>
 <body>
     <div class="corpo">
-        <img convite src="" />
-        <img qrcode src="" />
+        <img convite src="http://project.mohatron.com/cegonha/painel/img/convite.jpg" />
+        <img qrcode src="http://project.mohatron.com/cegonha/painel/img/qrcode.png" />
     </div>
 </body>
 </html>';

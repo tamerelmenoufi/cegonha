@@ -62,17 +62,17 @@
                   <!-- <td style="white-space: nowrap;"><?=$d->vendas?></td> -->
                   <td style="white-space: nowrap;">
 
-                    <!-- <button
+                    <button
                       class="btn btn-primary"
-                      cliente="<?=$d->codigo?>"
+                      convite="<?=$d->codigo?>"
                       nome="<?=$d->nome?>"
                       data-bs-toggle="offcanvas"
                       href="#offcanvasDireita"
                       role="button"
                       aria-controls="offcanvasDireita"
                     >
-                      Endereços
-                    </button> -->
+                      Convite
+                    </button>
 
                     <button
                       class="btn btn-primary"
@@ -125,6 +125,20 @@
             cod = $(this).attr("edit");
             $.ajax({
                 url:"src/clientes/form.php",
+                type:"POST",
+                data:{
+                  cod
+                },
+                success:function(dados){
+                    $(".LateralDireita").html(dados);
+                }
+            })
+        })
+
+        $("button[convite]").click(function(){
+            cod = $(this).attr("convite");
+            $.ajax({
+                url:"src/clientes/convite.php",
                 type:"POST",
                 data:{
                   cod
