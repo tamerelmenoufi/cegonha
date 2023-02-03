@@ -322,7 +322,7 @@
           url:"src/comanda.php",
           type:"POST",
           data:{
-            produto,
+            codProduto:produto,
           },
           success:function(dados){
             $(".LateralDireita").html(dados);
