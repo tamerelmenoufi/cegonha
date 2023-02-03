@@ -94,7 +94,7 @@
 
 
 <button comanda class="btn btn-primary" style="position:fixed; top:10px; right:10px; opacity:<?=((count($blq))?'0.7':'0')?>;">
-  <i class="fa-solid fa-cart-flatbed-suitcase"></i><br>
+  <i class="bi bi-cart"></i><br>
   Carrinho de compras
 </button>
 
@@ -154,7 +154,6 @@
 
         <div class="row gy-4">
           <?php
-          print_r($blq);
             // foreach($p as $i => $v){
             while($d = mysqli_fetch_object($result)){
           ?>
