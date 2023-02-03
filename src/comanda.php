@@ -124,16 +124,14 @@
 
 
     <div class="row justify-content-between">
-        <div class="col-10">
+        <div class="col-12">
             <?=$d->produto_nome?><br><small><?=$d->categoria_nome?> (<?=$d->tipo_nome?>)</small>
         </div>
     </div>
 
     <div class="row justify-content-between" style="margin-bottom:20px;">
-        <div class="col-2">
 
-        </div>
-        <div class="col-4">
+        <div class="col-5">
 
         </div>
         <div class="col-2">
