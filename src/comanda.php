@@ -108,6 +108,7 @@
                                 p.tipo,
                                 p.codigo as cod_produto,
                                 p.produto as produto_nome,
+                                p.estoque,
                                 if(p.tipo = 'p', 'Produto', 'Serviço') as tipo_nome,
                                 c.categoria as categoria_nome
                             from vendas_produtos a
@@ -138,6 +139,18 @@
             R$ <?=number_format($d->valor_unitario,2,',','.')?>
         </div>
         <div class="col-2">
+
+
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <?php
+            for($i=1;$i<=$d->estoque;$i++){
+            ?>
+            <option value="<?=$i?>" <?=(($d->quantidade == $i)?'selected':false)?>><?=$i?></option>
+            <?php
+            }
+            ?>
+        </select>
+
             <?=$d->quantidade?>
         </div>
         <div class="col-2">
