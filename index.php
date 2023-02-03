@@ -307,9 +307,14 @@
       })
 
 
-      $(".produto").click(function(){
+      $("a[produto]").click(function(){
+        produto = $(this).attr("produto");
         $.ajax({
           url:"src/comanda.php",
+          type:"POST",
+          data:{
+            produto,
+          },
           success:function(dados){
             $(".LateralDireita").html(dados);
           },

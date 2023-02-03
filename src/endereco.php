@@ -1,4 +1,4 @@
-<center><img src="../assets/img/logoende.png"
+<center><img src="assets/img/logoende.png"
  style="height:100px; margin-right:0px;"  class="img-fluid animated">
 
  <p style="color:#807d86;font-size:22px">
