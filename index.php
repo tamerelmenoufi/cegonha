@@ -4,6 +4,42 @@
 
     $_SESSION['convidado'] = '8';
 
+
+    if($_SESSION['convidado']){
+      $query = "select a.*,
+          (select codigo from vendas where cliente = a.codigo and situacao = 'n' and deletado != '1') as venda
+      from clientes a where a.codigo = '{$_SESSION['convidado']}'";
+      $result = mysqli_query($con, $query);
+      $d = mysqli_fetch_object($result);
+
+      if(!$d->venda){
+          mysqli_query($con, "insert into vendas set cliente = '{$d->codigo}', situacao = 'n'");
+          $_SESSION['codVenda'] = mysqli_insert_id($con);
+
+      }else{
+          $_SESSION['codVenda'] = $d->venda;
+      }
+
+      $query = "select
+                                a.*,
+                                p.tipo,
+                                p.codigo as cod_produto,
+                                p.produto as produto_nome,
+                                p.estoque,
+                                if(p.tipo = 'p', 'Produto', 'Serviço') as tipo_nome,
+                                c.categoria as categoria_nome
+                            from vendas_produtos a
+                                left join produtos p on a.produto = p.codigo
+                                left join produtos_categorias c on p.categoria = c.codigo
+                            where a.venda = '{$_SESSION['codVenda']}' group by a.produto";
+        $result = mysqli_query($con, $query);
+        $blq = [];
+        while($d = mysqli_fetch_object($result)){
+          $blq = $d->produto;
+        }
+    }
+
+
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -114,7 +150,7 @@
             // foreach($p as $i => $v){
             while($d = mysqli_fetch_object($result)){
           ?>
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" style="<?=((@in_array($d->codigo,$blq))?"background:#000; opacity:0.3":false)?>">
             <div class="service-item position-relative w-100" style="border:solid 2px #eee; border-radius:15px;">
               <h6><a
                     href="#XXX"
@@ -138,8 +174,8 @@
                 <!-- <i class="bi bi-activity icon"></i> -->
               </div>
               <div class="d-flex flex-row justify-content-between position-relative">
-                <button class="btn btn-outline-warning btn-sm" style="border:0">Preciso de<br><i class="bi bi-speedometer" style="font-size:30px"></i><br><span style="font-weight:bold"> <?=$d->estoque.(($d->estoque > 1)?' Itens':' Item')?></span></button>
-                <button class="btn btn-outline-success btn-sm" style="border:0">Comprar<br><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">R$ <?=number_format($d->valor,2,',','.')?></span><span style="font-size:9px">/Item</span></button>
+                <button <?=((@in_array($d->codigo,$blq))?'disabled':false)?> class="btn btn-outline-warning btn-sm" style="border:0">Preciso de<br><i class="bi bi-speedometer" style="font-size:30px"></i><br><span style="font-weight:bold"> <?=$d->estoque.(($d->estoque > 1)?' Itens':' Item')?></span></button>
+                <button <?=((@in_array($d->codigo,$blq))?'disabled':false)?> class="btn btn-outline-success btn-sm" style="border:0">Comprar<br><i class="bi bi-bag-heart-fill" style="font-size:30px"></i><br><span style="font-weight:bold">R$ <?=number_format($d->valor,2,',','.')?></span><span style="font-size:9px">/Item</span></button>
               </div>
             </div>
           </div><!-- End Service Item -->
