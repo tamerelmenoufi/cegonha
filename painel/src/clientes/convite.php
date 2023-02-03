@@ -53,4 +53,8 @@ $context = stream_context_create($opts);
 $result = file_get_contents('http://html2pdf.mohatron.com/', false, $context);
 
 $result = json_decode($result);
-echo base64_decode($result->doc);
+$arq = md5(date("YmdHis").$result->doc);
+$doc = base64_decode($result->doc);
+file_put_contents($arq, $doc);
+echo "<img src='src/clientes/{$arq}' style='width:100%' />";
+unlink($arq);
