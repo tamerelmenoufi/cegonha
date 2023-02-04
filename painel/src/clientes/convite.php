@@ -39,7 +39,8 @@ $html = '<!DOCTYPE html>
 
 $postdata = http_build_query(
     array(
-        'html' => base64_encode($html)
+        'html' => base64_encode($html),
+        'tipo' => 'pdf',
     )
 );
 $opts = array('http' =>
