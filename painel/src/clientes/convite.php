@@ -8,6 +8,13 @@ $html = '<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convite</title>
     <style>
+        body{
+            position:relative;
+            width:800px;
+            height:1120px;
+            border:0;
+            padding:0;
+        }
         .corpo{
             position:relative;
             width:800px;
