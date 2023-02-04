@@ -34,7 +34,7 @@ $html = '<!DOCTYPE html>
 <body>
     <div class="corpo">
         <img convite src="http://project.mohatron.com/cegonha/painel/img/convite.jpg" />
-        <img qrcode src="http://project.mohatron.com/cegonha/painel/img/qrcode.png" />
+        <img qrcode src="http://barcode.mohatron.com/barcode/?f=gif&s=qr&d=http://project.mohatron.com/cegonha/?c='.md5($_POST['cod']).'&sf=8&ms=s&md=0.9&tc=ffffff" />
     </div>
 </body>
 </html>';
