@@ -9,5 +9,5 @@ if(is_file("convites/{$_POST['cod']}.png")){
 }
 
 
-echo "<img src='src/clientes/{$arq}?".date("YmdHis")."' style='width:100%' />";
+echo "<img src='src/clientes/{$arq}' style='width:100%' />";
 // unlink($arq);
