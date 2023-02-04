@@ -40,7 +40,7 @@ $html = '<!DOCTYPE html>
 $postdata = http_build_query(
     array(
         'html' => base64_encode($html),
-        'tipo' => 'pdf',
+        'tipo' => 'img',
     )
 );
 $opts = array('http' =>
