@@ -1,5 +1,6 @@
 <?php
         include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
+        include("geraConvite.php");
         vl(['ProjectPainel']);
 
     if($_POST['acao'] == 'salvar'){
@@ -28,6 +29,7 @@
             $query = "insert into clientes set data_cadastro = NOW(), {$attr}";
             mysqli_query($con, $query);
             $cod = mysqli_insert_id($con);
+            $convite = GerarConvite($cod);
         }
 
         $retorno = [

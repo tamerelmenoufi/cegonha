@@ -1,5 +1,6 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
+
     vl(['ProjectPainel']);
 
     if($_POST['delete']){
