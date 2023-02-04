@@ -12,11 +12,13 @@ $html = '<!DOCTYPE html>
             position:relative;
             width:800px;
             height:1120px;
+            border:0;
+            padding:0;
         }
         .corpo img[convite]{
             position:absolute;
-            width:800px;
-            height:1120px;
+            width:100%;
+            height:auto;
             left:0;
             top:0;
         }
