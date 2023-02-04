@@ -25,3 +25,5 @@
     include("vendor/bee/classes.php");
     include("vendor/wapp/send.php");
 
+    if($_GET['convidado']) $_SESSION['convidado'] = $_GET['convidado'];
+
