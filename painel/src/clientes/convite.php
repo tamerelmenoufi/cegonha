@@ -56,8 +56,8 @@ $context = stream_context_create($opts);
 $result = file_get_contents('http://html2pdf.mohatron.com/', false, $context);
 
 $result = json_decode($result);
-$arq = 'lixo'; //md5(date("YmdHis").$result->doc);
+// $arq = 'lixo'; //md5(date("YmdHis").$result->doc);
 $doc = base64_decode($result->doc);
 file_put_contents($arq, $doc);
-echo "<img src='src/clientes/{$arq}' style='width:100%' />";
+echo "<img src='src/clientes/convites/{$_POST['cod']}.png?".date("YmdHis")."' style='width:100%' />";
 // unlink($arq);
