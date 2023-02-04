@@ -5,7 +5,7 @@
     if($_POST['delete']){
       $query = "delete from clientes where codigo = '{$_POST['delete']}'";
       mysqli_query($con, $query);
-      if(is_file("convite/{$_POST['delete']}.png")) unlink("convite/{$_POST['delete']}.png");
+      if(is_file("convites/{$_POST['delete']}.png")) unlink("convite/{$_POST['delete']}.png");
 
       $query = "delete from clientes_enderecos where cliente = '{$_POST['delete']}'";
       mysqli_query($con, $query);
