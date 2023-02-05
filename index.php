@@ -132,7 +132,7 @@
 <?php
 if($nome_conovidado){
 ?>
-<center><h5>Seja bem-vindo(a) <?=$nome_conovidado?></h5></center>
+<center><h5 class="m-3 p-3">Seja bem-vindo(a) <?=$nome_conovidado?></h5></center>
 <?php
 }
 ?>
