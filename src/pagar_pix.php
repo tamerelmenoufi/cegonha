@@ -102,7 +102,7 @@
                                     }
                                 }');
 
-                                $dados = json_decode($retorno);
+                                echo $dados = json_decode($retorno);
 
                                 $operadora_id = $dados->id;
                                 $forma_pagamento = $dados->payment_method_id;
@@ -112,29 +112,6 @@
 
 
                                 if($operadora_id){
-
-                                    //////////////////////API DELIVERY////////////////////////////
-
-                                    $content = http_build_query(array(
-                                        'pedido' => $d->codigo,
-                                        'empresa' => $d->id_loja,
-                                    ));
-
-                                    $context = stream_context_create(array(
-                                        'http' => array(
-                                            'method'  => 'POST',
-                                            'content' => $content,
-                                            'header' => "Content-Type: application/x-www-form-urlencoded",
-                                        )
-                                    ));
-
-                                    $result = file_get_contents("http://bee.mohatron.com/pedido.php", null, $context);
-                                    $result = json_decode($result);
-                                    $api_delivery = $result->codigo;
-
-
-                                    //////////////////////API DELIVERY////////////////////////////
-
 
                                     $q = "insert into status_venda set
                                     venda = '{$d->codigo}',
@@ -149,8 +126,7 @@
                                                                 forma_pagamento = '{$forma_pagamento}',
                                                                 operadora = 'mercadopago',
                                                                 operadora_situacao = '{$operadora_situacao}',
-                                                                operadora_retorno = '{$retorno}',
-                                                                api_delivery = '{$api_delivery}'
+                                                                operadora_retorno = '{$retorno}'
                                                         where codigo = '{$d->codigo}'
                                                 ");
 
