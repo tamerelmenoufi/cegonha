@@ -13,7 +13,7 @@
                     c.rua, bairro
                 from vendas_produtos a
                     left join clientes b on a.cliente = b.codigo
-                where a.venda = '{$_SESSION['AppVenda']}' and a.deletado != '1'";
+                where a.venda = '{$_SESSION['codVenda']}' and a.deletado != '1'";
 
     echo $query = "select
                     a.*,
@@ -29,7 +29,7 @@
                      left join clientes b on a.cliente = b.codigo
                      left join clientes_enderecos c on c.cliente = b.codigo and c.padrao = '1'
                      left join lojas d on a.loja = d.codigo
-                where a.codigo = '{$_SESSION['AppVenda']}'";
+                where a.codigo = '{$_SESSION['codVenda']}'";
 
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
