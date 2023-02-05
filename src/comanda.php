@@ -175,7 +175,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row ms-3">
         <div class="col-6">
             <button class="btn btn-lg btn-primary w-100 credito">
                 <i class="bi bi-credit-card-2-front-fill"></i> Crédito
