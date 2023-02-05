@@ -178,6 +178,7 @@
     <div class="row" style="margin-top:30px;">
         <div class="col-6">
             <button class="btn btn-lg btn-primary w-100 credito">
+                Pagar com<br>
                 <i class="bi bi-credit-card-2-front-fill" style="font-size:50px; font-weight:bold"></i>
                 <br>
                 Crédito
@@ -185,6 +186,7 @@
         </div>
         <div class="col-6">
             <button class="btn btn-lg btn-primary w-100 pix">
+                Pagar com<br>
                 <i class="bi bi-qr-code-scan" style="font-size:50px; font-weight:bold"></i>
                 <br>
                 PIX
