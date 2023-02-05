@@ -9,8 +9,6 @@
     }
 
 
-
-
     if($_SESSION['convidado']){
       $query = "select a.*,
           (select codigo from vendas where cliente = a.codigo and situacao = 'n' and deletado != '1') as venda
@@ -307,6 +305,19 @@
     }
 
   $(function(){
+
+    <?php
+    if(!$_SESSION['convidado']){
+    ?>
+    loginPopup = $.dialog({
+      content:"url:src/login.php",
+      title:"Indentificação",
+      type:"green"
+    });
+    <?php
+    }
+    ?>
+
 
     $(".informacoes").click(function(){
       $(".LateralDireita").html('');
