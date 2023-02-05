@@ -1,5 +1,20 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
+
+    if($_POST['acao'] == 'login'){
+        $query = "select * from clientes where telefone = '{$_POST['telefone']}'";
+        $result = mysqli_query($con, $query);
+        $d = mysqli_fetch_object($result);
+        if($d->codigo){
+          echo "success";
+          $_SESSION['convidado'] = $d->codigo;
+        }else{
+          echo "error";
+          $_SESSION['convidado'] = false;
+        }
+        exit();
+      }
+
 ?>
 <!-- Tela de Login
 
