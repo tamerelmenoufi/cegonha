@@ -46,6 +46,12 @@
         }
     }
 
+    if($_SESSION['convidado']){
+      $q = "select * from clientes where codigo = '{$_SESSION['convidado']}'";
+      $r = mysqli_query($con, $q);
+      $cl = mysqli_fetch_object($r);
+      $nome_conovidado = $cl->nome;
+    }
 
 ?><!DOCTYPE html>
 <html lang="en">
