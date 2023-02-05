@@ -113,26 +113,34 @@
                                 $PIX = new MercadoPago;
                                 // "transaction_amount": '.$d->total.',
                                 // "transaction_amount": 2.11,
+
+                                // {
+                                //     "transaction_amount": '.$d->total.',
+                                //     "description": "Venda '.$pedido.' - Chá Revelação",
+                                //     "payment_method_id": "pix",
+                                //     "payer": {
+                                //     "email": "'.$d->email.'",
+                                //     "first_name": "'.substr($d->nome, 0, ($pos-1)).'",
+                                //     "last_name": "'.substr($d->nome, $pos, strlen($d->nome)).'",
+                                //     "identification": {
+                                //         "type": "CPF",
+                                //         "number": "'.str_replace(array('.','-'),false,$d->cpf).'"
+                                //     },
+                                //     "address": {
+                                //         "zip_code": "'.str_replace(array('.','-'),false,$d->cep).'",
+                                //         "street_name": "'.$d->rua.'",
+                                //         "street_number": "'.$d->numero.'",
+                                //         "neighborhood": "'.$d->bairro.'",
+                                //         "city": "Manaus",
+                                //         "federal_unit": "AM"
+                                //     }
+                                //     }
+                                // }
+
                                 $retorno = $PIX->Transacao('{
                                     "transaction_amount": '.$d->total.',
-                                    "description": "Pedido '.$pedido.' - Venda BKManaus (Delivery)",
-                                    "payment_method_id": "pix",
-                                    "payer": {
-                                    "email": "'.$d->email.'",
-                                    "first_name": "'.substr($d->nome, 0, ($pos-1)).'",
-                                    "last_name": "'.substr($d->nome, $pos, strlen($d->nome)).'",
-                                    "identification": {
-                                        "type": "CPF",
-                                        "number": "'.str_replace(array('.','-'),false,$d->cpf).'"
-                                    },
-                                    "address": {
-                                        "zip_code": "'.str_replace(array('.','-'),false,$d->cep).'",
-                                        "street_name": "'.$d->rua.'",
-                                        "street_number": "'.$d->numero.'",
-                                        "neighborhood": "'.$d->bairro.'",
-                                        "city": "Manaus",
-                                        "federal_unit": "AM"
-                                    }
+                                    "description": "Venda '.$pedido.' - Chá Revelação",
+                                    "payment_method_id": "pix"
                                     }
                                 }');
 
