@@ -2,7 +2,7 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 
     if($_GET['c']){
-      $query = "select * from clientes where md5(codigo) = '{$_GET['c']}'";
+      echo $query = "select * from clientes where md5(codigo) = '{$_GET['c']}'";
       $result = mysqli_query($con, $query);
       $d = mysqli_fetch_object($result);
       $_SESSION['convidado'] = $d->codigo;
