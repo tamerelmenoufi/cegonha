@@ -276,9 +276,14 @@
         });
 
 
+        $(".pix").click(function(){
+            $.alert('PIX');
+        })
 
 
-
+        $(".credito").click(function(){
+            $.alert('CREDITO');
+        })
 
 
     })
