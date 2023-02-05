@@ -8,7 +8,7 @@ Tela de Login
 <script>
     $(function(){
 
-        $("fechar").click(function(){
+        $(".fechar").click(function(){
             loginPopup.close();
         });
 
