@@ -102,8 +102,8 @@
                                     }
                                 }');
 
-                                echo $retorno;
-                                //$dados = json_decode($retorno);
+                                // echo $retorno;
+                                $dados = json_decode($retorno);
 
                                 $operadora_id = $dados->id;
                                 $forma_pagamento = $dados->payment_method_id;
