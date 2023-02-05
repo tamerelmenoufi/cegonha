@@ -211,9 +211,7 @@
         }else{
         ?>
         $("button[comanda]").css("opacity","0");
-        let myOffCanvas = document.getElementById('offcanvasDireita');
-        let openedCanvas = bootstrap.Offcanvas.getInstance(myOffCanvas);
-        openedCanvas.hide();
+        window.location.href="./?c=<?=md5($_SESSION['convidado'])?>";
         <?php
         }
         ?>
