@@ -1,9 +1,9 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 ?>
-Tela de Login
+<!-- Tela de Login
 
-<button class="btn btn-danger fechar">Fechar</button>
+<button class="btn btn-danger fechar">Fechar</button> -->
 
 <div class="mb-3">
     <label for="telefone" class="form-label">Digite o seu número WhatsApp</label>
@@ -14,6 +14,7 @@ Tela de Login
 
 <script>
     $(function(){
+        $("#telefone").mask("(99) 99999-9999");
         $(".enviar").click(function(){
             telefone = $("#telefone").val();
             if(telefone.length == 15){

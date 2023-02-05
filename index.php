@@ -109,6 +109,7 @@
   <link href="<?=$localPainel?>lib/vendor/jquery-confirm-v3.3.4/dist/jquery-confirm.min.css" rel="stylesheet" >
   <script src="<?=$localPainel?>lib/vendor/jquery-confirm-v3.3.4/dist/jquery-confirm.min.js" ></script>
 
+  <script src="<?=$localPainel?>lib/vendor/jQuery-Mask/jquery.mask.min.js" ></script>
 
     <style>
       .bloq{
