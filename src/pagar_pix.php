@@ -77,33 +77,28 @@
                                 // "transaction_amount": '.$d->total.',
                                 // "transaction_amount": 2.11,
 
-                                // {
-                                //     "transaction_amount": '.$d->total.',
-                                //     "description": "Venda '.$pedido.' - Chá Revelação",
-                                //     "payment_method_id": "pix",
-                                //     "payer": {
-                                //     "email": "'.$d->email.'",
-                                //     "first_name": "'.substr($d->nome, 0, ($pos-1)).'",
-                                //     "last_name": "'.substr($d->nome, $pos, strlen($d->nome)).'",
-                                //     "identification": {
-                                //         "type": "CPF",
-                                //         "number": "'.str_replace(array('.','-'),false,$d->cpf).'"
-                                //     },
-                                //     "address": {
-                                //         "zip_code": "'.str_replace(array('.','-'),false,$d->cep).'",
-                                //         "street_name": "'.$d->rua.'",
-                                //         "street_number": "'.$d->numero.'",
-                                //         "neighborhood": "'.$d->bairro.'",
-                                //         "city": "Manaus",
-                                //         "federal_unit": "AM"
-                                //     }
-                                //     }
-                                // }
+
 
                                 $retorno = $PIX->Transacao('{
                                     "transaction_amount": '.$d->total.',
                                     "description": "Venda '.$pedido.' - Chá Revelação",
-                                    "payment_method_id": "pix"
+                                    "payment_method_id": "pix",
+                                    "payer": {
+                                    "email": "tamer@mohatron.com.br",
+                                    "first_name": "Tamer",
+                                    "last_name": "Elmenoufi",
+                                    "identification": {
+                                        "type": "CPF",
+                                        "number": "60110970225"
+                                    },
+                                    "address": {
+                                        "zip_code": "69010110",
+                                        "street_name": "Monsenhor Coutinho",
+                                        "street_number": "600",
+                                        "neighborhood": "Centro",
+                                        "city": "Manaus",
+                                        "federal_unit": "AM"
+                                    }
                                     }
                                 }');
 
