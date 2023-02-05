@@ -41,6 +41,7 @@
         $result = mysqli_query($con, $query);
         $blq = [];
         while($d = mysqli_fetch_object($result)){
+          $nome_conovidado = $d->nome_conovidado;
           $blq[] = $d->produto;
         }
     }
@@ -129,9 +130,9 @@
 </button>
 
 <?php
-if($d->nome_conovidado){
+if($nome_conovidado){
 ?>
-<center><h5>Seja bem-vindo(a) <?=$d->nome_conovidado?></h5></center>
+<center><h5>Seja bem-vindo(a) <?=$nome_conovidado?></h5></center>
 <?php
 }
 ?>
