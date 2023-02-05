@@ -312,7 +312,8 @@
     loginPopup = $.dialog({
       content:"url:src/login.php",
       title:"Indentificação",
-      type:"green"
+      type:"green",
+      closeIcon:false
     });
     <?php
     }
