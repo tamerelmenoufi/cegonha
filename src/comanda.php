@@ -89,16 +89,16 @@
 <h4 class="Titulo<?=$md5?>"><i class="fa-solid fa-receipt"></i> Comanda da compra</h4>
 <div class="p-3" style="font-size:12px;">
     <div class="row justify-content-between" style="margin-bottom:10px;">
-    <div class="col-5">
+    <div class="col-3">
         <b>Descrição</b>
     </div>
-    <div class="col-2">
+    <div class="col-3">
         <b>Vl Uni</b>
     </div>
-    <div class="col-2">
+    <div class="col-3">
         <b>Quant.</b>
     </div>
-    <div class="col-2">
+    <div class="col-3">
         <b>Vl Tot</b>
     </div>
     </div>
@@ -137,13 +137,13 @@
 
     <div class="row justify-content-between" style="margin-bottom:20px;">
 
-        <div class="col-5">
+        <div class="col-3">
 
         </div>
-        <div class="col-2">
+        <div class="col-3">
             R$ <?=number_format($d->valor_unitario,2,',','.')?>
         </div>
-        <div class="col-2">
+        <div class="col-3">
         <select class="form-select form-select-sm atualizar" produto="<?=$d->codigo?>" aria-label=".form-select-sm example">
             <?php
             for($i=1;$i<=$d->estoque;$i++){
@@ -154,7 +154,7 @@
             ?>
         </select>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             R$ <?=number_format($d->valor,2,',','.')?>
         </div>
     </div>
