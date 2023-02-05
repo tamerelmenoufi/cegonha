@@ -102,7 +102,7 @@
                                     }
                                 }');
 
-                                // echo $retorno;
+                                echo $retorno;
                                 $dados = json_decode($retorno);
 
                                 $operadora_id = $dados->id;
