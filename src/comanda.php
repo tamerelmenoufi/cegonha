@@ -177,12 +177,12 @@
 
     <div class="row">
         <div class="col-6">
-            <button class="btn btn-lg btn-primary btn-block credito">
+            <button class="btn btn-lg btn-primary w-100 credito">
                 <i class="bi bi-credit-card-2-front-fill"></i> Crédito
             </button>
         </div>
         <div class="col-6">
-            <button class="btn btn-lg btn-primary btn-block pix">
+            <button class="btn btn-lg btn-primary w-100 pix">
                 <i class="bi bi-qr-code-scan"></i> PIX
             </button>
         </div>
