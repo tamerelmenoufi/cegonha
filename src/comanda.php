@@ -2,14 +2,15 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 
     if($_SESSION['convidado']){
-        echo $query = "select a.*,
+        $query = "select a.*,
             (select codigo from vendas where cliente = a.codigo and situacao = 'n' and deletado != '1') as venda
         from clientes a where a.codigo = '{$_SESSION['convidado']}'";
         $result = mysqli_query($con, $query);
         $d = mysqli_fetch_object($result);
 
         if(!$d->venda){
-            mysqli_query($con, "insert into vendas set cliente = '{$d->codigo}', situacao = 'n'");
+            $q = "insert into vendas set cliente = '{$d->codigo}', situacao = 'n'";
+            mysqli_query($con, $q);
             $_SESSION['codVenda'] = mysqli_insert_id($con);
 
         }else{
