@@ -15,7 +15,7 @@
                     left join clientes b on a.cliente = b.codigo
                 where a.venda = '{$_SESSION['AppVenda']}' and a.deletado != '1'";
 
-    $query = "select
+    echo $query = "select
                     a.*,
                     d.id as id_loja,
                     b.nome,
