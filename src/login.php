@@ -6,7 +6,7 @@
         $result = mysqli_query($con, $query);
         $d = mysqli_fetch_object($result);
         if($d->codigo){
-          echo "success";
+          echo md5($d->codigo);
           $_SESSION['convidado'] = $d->codigo;
         }else{
           echo "error";
@@ -41,13 +41,14 @@
                         acao:'login'
                     },
                     success:function(dados){
-                        if(dados.trim() == 'success'){
-                            window.location.href="./?c=<?=md5($d->codigo)?>";
-                        }else{
+                        d = dados.trim();
+                        if(d == 'error'){
                             $.alert({
                                 content:"Ocorreu um erro:<br>Não identificamos o telefone na lista de convidados!",
                                 title:"Alerta de Erro",
                             });
+                        }else{
+                            window.location.href=`./?c=${d}`;
                         }
                     }
                 });
