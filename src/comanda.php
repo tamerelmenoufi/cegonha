@@ -277,7 +277,12 @@
 
 
         $(".pix").click(function(){
-            $.alert('PIX');
+            $.ajax({
+                url:"src/pagar_pix.php",
+                success:function(dados){
+                    $(".forma_pagamento").html(dados);
+                }
+            });
         })
 
 

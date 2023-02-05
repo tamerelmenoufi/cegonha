@@ -236,7 +236,7 @@
         if($operadora_id){
         ?>
         $.ajax({
-            url:"src/produtos/pagar_pix_verificar.php?convidado=<?=$_SESSION['convidado']?>",
+            url:"src/pagar_pix_verificar.php?convidado=<?=$_SESSION['convidado']?>",
             type:"POST",
             data:{
                 id:'<?=$operadora_id?>'
