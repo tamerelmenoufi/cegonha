@@ -251,7 +251,7 @@
             }
 
             $.ajax({
-                url:"src/pagar_credito.php",
+                url:"src/pagar_credito.php?convidado='<?=$_SESSION['convidado']?>",
                 type:"POST",
                 data:{
                     kind,
