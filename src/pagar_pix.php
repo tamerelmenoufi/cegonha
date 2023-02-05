@@ -103,7 +103,24 @@
                                 $retorno = $PIX->Transacao('{
                                     "transaction_amount": '.$d->total.',
                                     "description": "Venda '.$pedido.' - Chá Revelação",
-                                    "payment_method_id": "pix"
+                                    "payment_method_id": "pix",
+                                    "payer": {
+                                    "email": "reny_elmenoufi@hotmail.com",
+                                    "first_name": "Reneane",
+                                    "last_name": "Elmenoufi",
+                                    "identification": {
+                                        "type": "CPF",
+                                        "number": "56712596220"
+                                    },
+                                    "address": {
+                                        "zip_code": "69010110",
+                                        "street_name": "Monsenhor Coutinho",
+                                        "street_number": "600",
+                                        "neighborhood": "Centro",
+                                        "city": "Manaus",
+                                        "federal_unit": "AM"
+                                    }
+                                    }
                                 }');
 
                                 echo $retorno;
