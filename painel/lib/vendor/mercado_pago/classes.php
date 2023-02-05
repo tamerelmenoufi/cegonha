@@ -5,8 +5,8 @@
         public $Ambiente = 'producao'; //homologacao ou producao
 
         public function Autenticacao(){
-            global $cBk;
-            return $cBk['mercado_pago'][$this->Ambiente]['TOKEN'];
+            global $cBarb;
+            return $cBarb['mercado_pago'][$this->Ambiente]['TOKEN'];
         }
 
         public function Ambiente($opc){
