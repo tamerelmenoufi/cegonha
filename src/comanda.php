@@ -166,11 +166,11 @@
     ?>
 
     <div class="row justify-content-between">
-        <div class="col-10 text-end">
+        <div class="col-9 text-end">
             <b>TOTAL</b>
         </div>
 
-        <div class="col-2">
+        <div class="col-3">
             <b>R$ <?=number_format($total,2,',','.')?></b>
         </div>
     </div>
