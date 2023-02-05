@@ -2,34 +2,9 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 
     $query = "select
-                    a.venda,
-                    sum(a.valor_total) as total,
-                    b.nome,
-                    b.cpf,
-                    b.telefone,
-                    b.email,
-                    c.cep,
-                    c.numero,
-                    c.rua, bairro
-                from vendas_produtos a
-                    left join clientes b on a.cliente = b.codigo
-                where a.venda = '{$_SESSION['codVenda']}' and a.deletado != '1'";
-
-    echo $query = "select
-                    a.*,
-                    d.id as id_loja,
-                    b.nome,
-                    b.cpf,
-                    b.telefone,
-                    b.email,
-                    c.cep,
-                    c.numero,
-                    c.rua, bairro
-                from vendas a
-                     left join clientes b on a.cliente = b.codigo
-                     left join clientes_enderecos c on c.cliente = b.codigo and c.padrao = '1'
-                     left join lojas d on a.loja = d.codigo
-                where a.codigo = '{$_SESSION['codVenda']}'";
+                    *
+                from vendas
+                where codigo = '{$_SESSION['codVenda']}'";
 
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);

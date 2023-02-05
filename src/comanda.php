@@ -163,6 +163,10 @@
             $total = ($total + $d->valor);
             $QtProd = ($QtProd + $d->quantidade);
                 }
+
+
+    mysqli_query($con, "update vendas set valor='{$total}', total = '{$total}' where codigo = '{$_SESSION['codVenda']}'");
+
     ?>
 
     <div class="row justify-content-between">
