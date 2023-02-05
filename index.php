@@ -31,9 +31,11 @@
                                 p.produto as produto_nome,
                                 p.estoque,
                                 if(p.tipo = 'p', 'Produto', 'Serviço') as tipo_nome,
-                                c.categoria as categoria_nome
+                                c.categoria as categoria_nome,
+                                cl.nome as nome_conovidado
                             from vendas_produtos a
                                 left join produtos p on a.produto = p.codigo
+                                left join clientes cl on a.cliente = cl.codigo
                                 left join produtos_categorias c on p.categoria = c.codigo
                             where a.venda = '{$_SESSION['codVenda']}'";
         $result = mysqli_query($con, $query);
@@ -126,7 +128,13 @@
   Compras
 </button>
 
-
+<?php
+if($d->nome_conovidado){
+?>
+<center><h5>Seja bem-vindo(a) <?=$d->nome_conovidado?></h5></center>
+<?php
+}
+?>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
