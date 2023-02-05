@@ -22,6 +22,7 @@
     include("fn.php");
 
     include("vendor/rede/classes.php");
+    include("vendor/mercado_pago/classes.php");
     include("vendor/bee/classes.php");
     include("vendor/wapp/send.php");
 
