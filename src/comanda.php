@@ -223,7 +223,7 @@
             codigo = $(this).attr("produto");
             quantidade = $(this).val();
             $.ajax({
-                url:"src/comanda.php?convidado='<?=$_SESSION['convidado']?>",
+                url:"src/comanda.php?convidado=<?=$_SESSION['convidado']?>",
                 type:"POST",
                 data:{
                     codigo,
@@ -248,7 +248,7 @@
                 buttons:{
                     'SIM':function(){
                         $.ajax({
-                            url:"src/comanda.php?convidado='<?=$_SESSION['convidado']?>",
+                            url:"src/comanda.php?convidado=<?=$_SESSION['convidado']?>",
                             type:"POST",
                             data:{
                                 codigo,

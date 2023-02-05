@@ -2,7 +2,7 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 
     if($_GET['c']){
-      echo $query = "select * from clientes where md5(codigo) = '{$_GET['c']}'";
+      $query = "select * from clientes where md5(codigo) = '{$_GET['c']}'";
       $result = mysqli_query($con, $query);
       $d = mysqli_fetch_object($result);
       $_SESSION['convidado'] = $d->codigo;
@@ -311,7 +311,7 @@
     $(".informacoes").click(function(){
       $(".LateralDireita").html('');
       $.ajax({
-        url:"src/endereco.php?convidado='<?=$_SESSION['convidado']?>",
+        url:"src/endereco.php?convidado=<?=$_SESSION['convidado']?>",
         success:function(dados){
           $(".LateralDireita").html(dados);
         },
@@ -326,7 +326,7 @@
         produto = $(this).attr("produto");
         $(".LateralDireita").html('');
         $.ajax({
-          url:"src/comanda.php?convidado='<?=$_SESSION['convidado']?>",
+          url:"src/comanda.php?convidado=<?=$_SESSION['convidado']?>",
           type:"POST",
           data:{
             codProduto:produto,
@@ -345,7 +345,7 @@
       $("button[comanda]").click(function(){
         $(".LateralDireita").html('');
         $.ajax({
-          url:"src/comanda.php?convidado='<?=$_SESSION['convidado']?>",
+          url:"src/comanda.php?convidado=<?=$_SESSION['convidado']?>",
           success:function(dados){
             $(".LateralDireita").html(dados);
           },

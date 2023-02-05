@@ -44,7 +44,7 @@
         ?>
         setTimeout(() => {
             $.ajax({
-                url:"src/pagar_pix_verificar.php?convidado='<?=$_SESSION['convidado']?>",
+                url:"src/pagar_pix_verificar.php?convidado=<?=$_SESSION['convidado']?>",
                 type:"POST",
                 data:{
                     id:'<?=$_POST['id']?>'
