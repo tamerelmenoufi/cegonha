@@ -13,17 +13,7 @@
 
 ?>
 <style>
-    .PedidoTopoTitulo{
-        position:fixed;
-        left:0px;
-        top:0px;
-        width:100%;
-        height:60px;
-        background:#f5ebdc;
-        padding-left:70px;
-        padding-top:15px;
-        z-index:1;
-    }
+
     .card small{
         font-size:12px;
         text-align:left;
@@ -44,9 +34,7 @@
         text-align:center;
     }
 </style>
-<div class="PedidoTopoTitulo">
-    <h4>Pagar com PIX</h4>
-</div>
+
 <div class="col">
     <div class="row">
             <div class="col-12">
