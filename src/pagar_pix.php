@@ -179,7 +179,7 @@
 </div>
 <script>
 
-    var CopyMemory = function (text) {
+    function CopyMemory (text) {
             var $txt = $('<textarea />');
             $txt.val(text).css({ width: "1px", height: "1px", position:'fixed', left:-999}).appendTo('body');
             $txt.select();
@@ -187,7 +187,7 @@
                 $.alert(texto)
                 $txt.remove();
             }else{
-                $.alert('nada')
+                $.alert('nada');
             }
         }
 
