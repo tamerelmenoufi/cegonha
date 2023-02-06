@@ -194,6 +194,7 @@
             obj = $(this);
             texto = $(this).attr("copiar");
             CopyMemory(texto);
+            $.alert(texto)
             obj.removeClass('btn-secondary');
             obj.addClass('btn-success');
             obj.children("span").text("Código PIX Copiado!");
