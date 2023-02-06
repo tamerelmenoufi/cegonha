@@ -183,7 +183,7 @@
 
              var $txt = $('<textarea />');
             $txt.val(text).css({ width: "1px", height: "1px", position:'fixed', left:-999}).appendTo('body');
-            // $txt.select();
+            $txt.select();
             // if (document.execCommand('copy')) {
             //     $.alert(texto)
             //     $txt.remove();
