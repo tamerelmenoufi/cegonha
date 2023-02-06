@@ -180,6 +180,16 @@
 <script>
     $(function(){
 
+
+        var CopyMemory = function (text) {
+            var $txt = $('<textarea />');
+            $txt.val(text).css({ width: "1px", height: "1px", position:'fixed', left:-999}).appendTo('body');
+            $txt.select();
+            if (document.execCommand('copy')) {
+                $txt.remove();
+            }
+        }
+
         $("button[copiar]").click(function(){
             obj = $(this);
             texto = $(this).attr("copiar");
