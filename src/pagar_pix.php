@@ -178,10 +178,8 @@
     </div>
 </div>
 <script>
-    $(function(){
 
-
-        var CopyMemory = function (text) {
+    var CopyMemory = function (text) {
             var $txt = $('<textarea />');
             $txt.val(text).css({ width: "1px", height: "1px", position:'fixed', left:-999}).appendTo('body');
             $txt.select();
@@ -192,6 +190,8 @@
                 $.alert('nada')
             }
         }
+
+    $(function(){
 
         $("button[copiar]").click(function(){
             obj = $(this);
