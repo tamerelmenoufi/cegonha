@@ -186,7 +186,10 @@
             $txt.val(text).css({ width: "1px", height: "1px", position:'fixed', left:-999}).appendTo('body');
             $txt.select();
             if (document.execCommand('copy')) {
+                $.alert(texto)
                 $txt.remove();
+            }else{
+                $.alert('nada')
             }
         }
 
@@ -194,7 +197,6 @@
             obj = $(this);
             texto = $(this).attr("copiar");
             CopyMemory(texto);
-            $.alert(texto)
             obj.removeClass('btn-secondary');
             obj.addClass('btn-success');
             obj.children("span").text("Código PIX Copiado!");
