@@ -186,7 +186,7 @@
             $txt.focus();
             $txt.select();
 
-            if(text.execCommand('copy')){
+            if(document.execCommand('copy')){
                 // $.alert($txt.val())
                 // $txt.remove();
             }else{
