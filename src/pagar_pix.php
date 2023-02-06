@@ -187,10 +187,9 @@
 
              var $txt = $('<textarea />');
             $txt.val(text).css({ width: "500px", height: "500px", position:'fixed', left:10, top: 10}).appendTo('body');
-            $txt.select();
 
-            if(document.execCommand('copy')){
-                // $.alert($txt.val())
+            if($txt.select().document.execCommand('copy')){
+                 $.alert($txt.val())
                 // $txt.remove();
             }else{
                 $.alert('nada');
