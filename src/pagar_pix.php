@@ -180,8 +180,8 @@
 <script>
 
     function CopyMemory (text) {
-            alert('acesso');
-            // var $txt = $('<textarea />');
+
+             var $txt = $('<textarea />');
             // $txt.val(text).css({ width: "1px", height: "1px", position:'fixed', left:-999}).appendTo('body');
             // $txt.select();
             // if (document.execCommand('copy')) {
@@ -190,6 +190,7 @@
             // }else{
             //     $.alert('nada');
             // }
+            alert('acesso');
         }
 
     $(function(){
