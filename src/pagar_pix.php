@@ -190,7 +190,7 @@
             }else{
                 $.alert('nada');
             }
-            alert('acesso');
+            // alert('acesso');
         }
 
     $(function(){
