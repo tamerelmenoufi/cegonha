@@ -180,8 +180,13 @@
     </div>
 
     <div class="row" style="margin-top:30px; margin-bottom:30px;">
-        <div class="col">
-            <button class="btn btn-lg btn-primary w-100 compras">
+        <div class="col-1"></div>
+        <div class="col-8">
+            <button class="btn btn-lg btn-primary w-100 compras"
+                    data-bs-toggle="offcanvas"
+                    href="#offcanvasDireita"
+                    role="button"
+                    aria-controls="offcanvasDireita">
                 Voltar às compras
             </button>
         </div>
@@ -306,9 +311,6 @@
 
         $(".compras").click(function(){
             $(".LateralDireita").html('');
-            let myOffCanvas = document.getElementById('offcanvasDireita');
-            let openedCanvas = bootstrap.Offcanvas.getInstance(myOffCanvas);
-            openedCanvas.hide();
         })
 
 
