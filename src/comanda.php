@@ -182,7 +182,7 @@
     <div class="row" style="margin-top:30px; margin-bottom:30px;">
         <div class="col-1"></div>
         <div class="col-8">
-            <button class="btn btn-lg btn-primary w-100 compras"
+            <button class="btn btn-lg btn-success w-100 compras"
                     data-bs-toggle="offcanvas"
                     href="#offcanvasDireita"
                     role="button"
