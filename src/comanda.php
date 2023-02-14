@@ -197,7 +197,7 @@
         <div class="col-4">
             <button class="btn btn-lg btn-primary w-100 credito">
                 Pagar com<br>
-                <i class="bi bi-credit-card-2-front-fill" style="font-size:50px; font-weight:bold"></i>
+                <i class="bi bi-credit-card-2-front-fill" style="font-size:40px; font-weight:bold"></i>
                 <br>
                 Crédito
             </button>
@@ -205,7 +205,7 @@
         <div class="col-4">
             <button class="btn btn-lg btn-primary w-100 pix">
                 Pagar com<br>
-                <i class="bi bi-qr-code-scan" style="font-size:50px; font-weight:bold"></i>
+                <i class="bi bi-qr-code-scan" style="font-size:40px; font-weight:bold"></i>
                 <br>
                 PIX
             </button>
