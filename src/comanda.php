@@ -179,8 +179,17 @@
         </div>
     </div>
 
-    <div class="row" style="margin-top:30px;">
-        <div class="col-6">
+    <div class="row" style="margin-top:30px; margin-bottom:30px;">
+        <div class="col">
+            <button class="btn btn-lg btn-primary w-100 compras">
+                Voltar às compras
+            </button>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:30px; margin-bottom:30px;">
+        <div class="col-2"></div>
+        <div class="col-4">
             <button class="btn btn-lg btn-primary w-100 credito">
                 Pagar com<br>
                 <i class="bi bi-credit-card-2-front-fill" style="font-size:50px; font-weight:bold"></i>
@@ -188,7 +197,7 @@
                 Crédito
             </button>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <button class="btn btn-lg btn-primary w-100 pix">
                 Pagar com<br>
                 <i class="bi bi-qr-code-scan" style="font-size:50px; font-weight:bold"></i>
@@ -293,6 +302,15 @@
         $(".credito").click(function(){
             $.alert('CREDITO');
         })
+
+
+        $(".compras").click(function(){
+            $(".LateralDireita").html('');
+            let myOffCanvas = document.getElementById('offcanvasDireita');
+            let openedCanvas = bootstrap.Offcanvas.getInstance(myOffCanvas);
+            openedCanvas.hide();
+        })
+
 
 
     })
