@@ -11,16 +11,16 @@ function GerarConvite($cod){
         <style>
             .corpo{
                 position:relative;
-                width:100%;
-                height:1120px;
+                width:1024px;
+                height:1420px;
                 border:0;
                 padding:0;
                 background:transparent;
             }
             .corpo img[convite]{
                 position:absolute;
-                width:100%;
-                height:auto;
+                position:relative;
+                width:1024px;
                 left:0;
                 top:0;
             }
