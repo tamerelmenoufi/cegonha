@@ -44,7 +44,7 @@
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">
-                    <input type="radio" class="marcarTudo" />
+                    <input type="checkbox" class="marcarTudo" />
                   </th>
                   <th scope="col" style="width:100%">Nome</th>
                   <!-- <th scope="col">CPF</th> -->
@@ -64,7 +64,7 @@
                 <tr>
                   <td style="white-space: nowrap;"><?=$p?></td>
                   <td style="white-space: nowrap;">
-                    <input type="radio" class="marcados" value="<?=$d->codigo?>" />
+                    <input type="checkbox" class="marcados" value="<?=$d->codigo?>" />
                   </td>
                   <td style="white-space: nowrap;"><?=$d->nome?></td>
                   <!-- <td style="white-space: nowrap;"><?=$d->cpf?></td> -->
@@ -124,6 +124,16 @@
 <script>
     $(function(){
         Carregando('none');
+
+        $(".marcarTudo").click(function(){
+          opc = $(this).prop("checked");
+          if(opc == true){
+            $(".marcados").prop("checked", true);
+          }else{
+            $(".marcados").prop("checked", false);
+          }
+        });
+
         $("button[novoCadastro]").click(function(){
             $.ajax({
                 url:"src/clientes/form.php",
