@@ -66,7 +66,7 @@
 
 
                     const cardForm = mp.cardForm({
-                        amount: "100.5",
+                        amount: "5.5",
                         iframe: true,
                         form: {
                             id: "form-checkout",
@@ -201,9 +201,6 @@
         $("#cartao_validade_mes").mask("99");
         $("#cartao_validade_ano").mask("9999");
         $("#cartao_ccv").mask("9999");
-
-
-
 
     })
 </script>
