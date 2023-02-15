@@ -18,7 +18,7 @@ function GerarConvite($cod){
             .corpo{
                 position:relative;
                 width:1024px;
-                height:1420px;
+                height:1440px;
                 border:0;
                 padding:0;
                 margin:0;
@@ -28,7 +28,7 @@ function GerarConvite($cod){
                 position:absolute;
                 position:relative;
                 width:1024px;
-                height:1420px;
+                height:1440px;
                 left:0;
                 top:0;
                 margin:0;
