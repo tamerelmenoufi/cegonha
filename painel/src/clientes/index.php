@@ -137,7 +137,7 @@
             }
           });
 
-          if(list.length){
+          if(lista.length){
             console.log(lista)
           }
 
