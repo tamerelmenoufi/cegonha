@@ -17,7 +17,7 @@ function GerarConvite($cod){
                 padding:0;
                 margin:0;
                 bottom:0;
-                background:transparent;
+                background:#eee;
             }
             .corpo img[convite]{
                 position:absolute;
@@ -35,7 +35,7 @@ function GerarConvite($cod){
                 width:250px;
                 height:250px;
                 left:calc(50% - 125px);
-                top:895px;
+                top:915px;
             }
         </style>
     </head>
