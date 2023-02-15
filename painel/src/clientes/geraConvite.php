@@ -28,6 +28,7 @@ function GerarConvite($cod){
                 position:absolute;
                 position:relative;
                 width:1024px;
+                height:1420px;
                 left:0;
                 top:0;
                 margin:0;
