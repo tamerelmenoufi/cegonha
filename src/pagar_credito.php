@@ -9,17 +9,7 @@
 
 ?>
 <style>
-    .PedidoTopoTitulo{
-        position:fixed;
-        left:0px;
-        top:0px;
-        width:100%;
-        height:60px;
-        background:#f5ebdc;
-        padding-left:70px;
-        padding-top:15px;
-        z-index:1;
-    }
+
     .card small{
         font-size:12px;
         text-align:left;
@@ -53,9 +43,7 @@
     }
 
 </style>
-<div class="PedidoTopoTitulo">
-    <h4>Pagar <?=$_SESSION['AppPedido']?> com Crédito</h4>
-</div>
+
 <div class="col" style="margin-bottom:60px;">
     <div class="row">
             <div class="col-12">
