@@ -9,12 +9,19 @@ function GerarConvite($cod){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Convite</title>
         <style>
+            body{
+                background:transparent;
+                border:0;
+                padding:0;
+                margin:0;
+            }
             .corpo{
                 position:relative;
                 width:1024px;
                 height:1420px;
                 border:0;
                 padding:0;
+                margin:0;
                 background:transparent;
             }
             .corpo img[convite]{
@@ -25,6 +32,7 @@ function GerarConvite($cod){
                 top:0;
                 margin:0;
                 padding:0;
+                border:0;
             }
             .corpo img[qrcode]{
                 position:absolute;
