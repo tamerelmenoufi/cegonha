@@ -130,6 +130,7 @@
         Carregando('none');
 
         $(".enviarConvites").click(function(){
+
           lista = [];
           $(".marcados").each(function(){
             if($(this).prop("checked") == true){
@@ -139,6 +140,20 @@
 
           if(lista.length){
             console.log(lista)
+            $.confirm({
+              content:`Deseja realmente enviar os convites para os <b>${lista.length}</b> convidados?`,
+              title:"Envio de convites",
+              buttons:{
+                'SIM':function(){
+
+                },
+                'NÃO':function(){
+
+                }
+              }
+            })
+          }else{
+            $.alert('Favor selecione um ou mais contatos para envio dos convites.')
           }
 
         });
