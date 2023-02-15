@@ -16,4 +16,6 @@
 
     }
 
+    SendWapp('92991886570', 'Mensagem com confirmação de envio dos convites');
+
 
