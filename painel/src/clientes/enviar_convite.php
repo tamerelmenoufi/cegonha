@@ -10,7 +10,7 @@
             $arq = GerarConvite($_POST['cod']);
         }
 
-        echo $arq."<hr>";
+        echo "<img src='".$arq."' /><hr>";
 
     }
 
