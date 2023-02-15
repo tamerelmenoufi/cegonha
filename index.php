@@ -123,6 +123,9 @@
 
 <body>
 <script src="https://sdk.mercadopago.com/js/v2"></script>
+<script>
+  const mp = new MercadoPago("APP_USR-dc7289b9-3b81-47e0-b705-f935a324b0d7");
+</script>
 
 <button
         comanda

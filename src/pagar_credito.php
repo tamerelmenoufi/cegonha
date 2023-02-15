@@ -49,7 +49,7 @@
             <div class="col-12">
 
                 <script>
-                    const mp = new MercadoPago("APP_USR-dc7289b9-3b81-47e0-b705-f935a324b0d7");
+
 
                     const cardForm = mp.cardForm({
                         amount: "5.5",
