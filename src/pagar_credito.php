@@ -3,7 +3,7 @@
 
 
 
-    $query = "select a.*, b.id as id_loja from vendas a left join lojas b on a.loja = b.codigo where a.codigo = '{$_SESSION['AppVenda']}'";
+    $query = "select * from vendas where codigo = '{$_SESSION['AppVenda']}'";
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
 
