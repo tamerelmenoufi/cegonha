@@ -42,6 +42,10 @@
             <table class="table table-striped table-hover">
               <thead>
                 <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">
+                    <input type="radio" class="marcarTudo" />
+                  </th>
                   <th scope="col" style="width:100%">Nome</th>
                   <!-- <th scope="col">CPF</th> -->
                   <th scope="col">Telefone</th>
@@ -54,9 +58,14 @@
                 <?php
                   $query = "select a.*, (select count(*) from vendas where cliente = a.codigo and situacao != 'n') as vendas from clientes a order by a.nome asc";
                   $result = mysqli_query($con, $query);
+                  $p=1;
                   while($d = mysqli_fetch_object($result)){
                 ?>
                 <tr>
+                  <td style="white-space: nowrap;"><?=$p?></td>
+                  <td style="white-space: nowrap;">
+                    <input type="radio" class="marcados" value="<?=$d->codigo?>" />
+                  </td>
                   <td style="white-space: nowrap;"><?=$d->nome?></td>
                   <!-- <td style="white-space: nowrap;"><?=$d->cpf?></td> -->
                   <td style="white-space: nowrap;"><?=$d->telefone?></td>
@@ -98,6 +107,7 @@
                   </td>
                 </tr>
                 <?php
+                $p++;
                   }
                 ?>
               </tbody>
