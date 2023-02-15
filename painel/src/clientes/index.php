@@ -29,7 +29,7 @@
           <div class="card-body">
             <div style="display:flex; justify-content:end">
                 <button
-                    class="btn btn-warning enviarConvites"
+                    class="btn btn-warning me-3 enviarConvites"
                 >Enviar Convite</button>
 
                 <button
