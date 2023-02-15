@@ -29,6 +29,10 @@
           <div class="card-body">
             <div style="display:flex; justify-content:end">
                 <button
+                    class="btn btn-warning enviarConvites"
+                >Enviar Convite</button>
+
+                <button
                     novoCadastro
                     class="btn btn-success"
                     data-bs-toggle="offcanvas"
@@ -124,6 +128,20 @@
 <script>
     $(function(){
         Carregando('none');
+
+        $(".enviarConvites").click(function(){
+          lista = [];
+          $(".marcados").each(function(){
+            if($(this).prop("checked") == true){
+              lista.push([$(this).val()]);
+            }
+          });
+
+          if(list.length){
+            console.log(lista)
+          }
+
+        });
 
         $(".marcarTudo").click(function(){
           opc = $(this).prop("checked");
