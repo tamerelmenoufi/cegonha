@@ -14,8 +14,19 @@
 
         echo "<img src='src/clientes/".$arq."' /><hr>";
 
+        $arquivo = "data:image/png;base64,".base64_encode(file_get_contents($arq));
+        $nome = "convite.png";
+
     }
 
-    SendWapp('92991886570', 'Mensagem com confirmação de envio dos convites');
+    // SendWapp('92991886570', 'Mensagem com confirmação de envio dos convites');
+    SendWapp(
+            '92991886570',
+            [
+                'nome' => $nome,
+                'arquivo' => $arquivo
+            ],
+            'file'
+        );
 
 

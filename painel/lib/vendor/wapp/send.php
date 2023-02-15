@@ -1,11 +1,12 @@
 <?php
 
-    function SendWapp($n, $m){
+    function SendWapp($n, $m, $t = false){
 
         $postdata = http_build_query(
             array(
                 'numero' => $n, // Receivers phonei
                 'mensagem' => $m,
+                'tipo' => $t
             )
         );
         $opts = array('http' =>
