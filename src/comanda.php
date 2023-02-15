@@ -307,7 +307,7 @@
         $(".credito").click(function(){
 
             $.ajax({
-                url:"src/pagar_pix.php",
+                url:"src/pagar_credito.php",
                 success:function(dados){
                     // $(".forma_pagamento").html(dados);
                     $.alert({
