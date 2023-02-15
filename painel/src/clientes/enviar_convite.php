@@ -14,7 +14,7 @@
 
         echo "<img src='src/clientes/".$arq."' /><hr>";
 
-        $arquivo = "data:image/png;base64,".base64_encode(file_get_contents($arq));
+        $arquivo = "http://project.mohatron.com/cegonha/painel/src/clientes/{$arq}";
         $nome = "convite.png";
 
     }
