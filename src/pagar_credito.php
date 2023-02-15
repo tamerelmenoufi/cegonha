@@ -59,7 +59,6 @@
 <div class="col" style="margin-bottom:60px;">
     <div class="row">
             <div class="col-12">
-                <script src="https://sdk.mercadopago.com/js/v2"></script>
 
                 <script>
                     const mp = new MercadoPago("APP_USR-dc7289b9-3b81-47e0-b705-f935a324b0d7");
