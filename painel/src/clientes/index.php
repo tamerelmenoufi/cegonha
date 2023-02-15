@@ -145,7 +145,17 @@
               title:"Envio de convites",
               buttons:{
                 'SIM':function(){
+                  $.ajax({
+                    url:"src/clientes/enviar_convite.php",
+                    type:"POST",
+                    data:{
+                      convites:lista
+                    },
+                    success:function(dados){
+                      $.alert(dados);
+                    }
 
+                  });
                 },
                 'NÃO':function(){
 
