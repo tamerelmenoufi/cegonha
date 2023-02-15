@@ -1,106 +1,7 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 
-    if($_POST['acao'] == 'pagar'){
 
-        //////////////////////API DELIVERY////////////////////////////
-
-        $content = http_build_query(array(
-            'pedido' => $_POST['reference'],
-            'empresa' => $_POST['loja'],
-        ));
-
-        $context = stream_context_create(array(
-            'http' => array(
-                'method'  => 'POST',
-                'content' => $content,
-                'header' => "Content-Type: application/x-www-form-urlencoded",
-            )
-        ));
-
-        $result = file_get_contents("http://bee.mohatron.com/pedido.php", null, $context);
-        $result = json_decode($result);
-        $api_delivery = $result->codigo;
-
-        //////////////////////API DELIVERY////////////////////////////
-        if($_SESSION["palavra"] == $_POST['captcha']){
-
-            require "../lib/vendor/rede/Transacao.php";
-
-            $query = "insert into status_venda set
-                                                venda = '{$_POST['reference']}',
-                                                operadora = 'rede',
-                                                tipo = 'credito',
-                                                data = NOW(),
-                                                retorno = '{$retorno}'";
-            mysqli_query($con, $query);
-
-            require "../lib/vendor/rede/Consulta.php";
-            $r = json_decode($retorno);
-
-            $query = "update vendas set
-
-                                        operadora = 'rede',
-                                        operadora_situacao = '{$r->authorization->status}',
-                                        operadora_retorno = '{$retorno}',
-                                        /*valor = '{$_POST['amount']}',
-                                        taxa = '{$_POST['taxa']}',
-                                        desconto = '{$_POST['desconto']}',
-                                        acrescimo = '{$_POST['acrescimo']}',
-                                        total = '".($_POST['amount'] + $_POST['taxa'] + $_POST['taxa_entrega'] - $_POST['desconto'] + $_POST['acrescimo'])."',
-                                        observacoes = '{$_POST['observacoes']}',*/
-                                        data_finalizacao = NOW(),
-                                        api_delivery = '{$api_delivery}',
-                                        ".(($r->authorization->status == 'Approved')?"situacao = 'p',":false)."
-                                        forma_pagamento = 'credito'
-
-                    where codigo = '{$_POST['reference']}'";
-            mysqli_query($con, $query);
-
-            if($r->authorization->status == 'Approved'){
-                //mysqli_query($con, "INSERT INTO vendas SET cliente = '{$_SESSION['AppCliente']}', mesa = '{$_SESSION['AppPedido']}'");
-                $_SESSION['AppVenda'] = false; //mysqli_insert_id($con);
-                $_SESSION['AppPedido'] = false;
-                $_SESSION['AppCarrinho'] = false;
-                echo json_encode([
-                    'status' => $r->authorization->status,
-                    'msg' => 'Operação realizada com sucesso!',
-                    //'AppVenda' => $_SESSION['AppVenda'],
-                ]);
-            }else if($r->authorization->status == 'Denied')
-            {
-                echo json_encode([
-                    'status' => $r->authorization->status,
-                    'msg' => 'Operação Negada, consulte os dados do Cartão ou entre em contato com sua operadora!',
-                    //'AppVenda' => $_SESSION['AppVenda'],
-                ]);
-            }else{
-                echo json_encode([
-                    'status' => false,
-                    'msg' => 'Ocorreu um erro, tente novamente!',
-                    //'AppVenda' => $_SESSION['AppVenda'],
-                ]);
-                //Dados de teste
-            }
-            mysqli_query($con, "update vendas set tentativas_pagamento = (tentativas_pagamento -1) where codigo = '{$_POST['reference']}'");
-        }else{
-                echo json_encode([
-                    'status' => false,
-                    'msg' => 'Capcha não identificado, favor tente novamente!',
-                    //'AppVenda' => $_SESSION['AppVenda'],
-                ]);
-        }
-
-        exit();
-    }
-
-    $query = "select
-                    sum(a.valor_total) as total,
-                    b.nome,
-                    b.telefone
-                from vendas_produtos a
-                    left join clientes b on a.cliente = b.codigo
-                where a.venda = '{$_SESSION['AppVenda']}' and a.deletado != '1'";
 
     $query = "select a.*, b.id as id_loja from vendas a left join lojas b on a.loja = b.codigo where a.codigo = '{$_SESSION['AppVenda']}'";
     $result = mysqli_query($con, $query);
@@ -158,50 +59,149 @@
 <div class="col" style="margin-bottom:60px;">
     <div class="row">
             <div class="col-12">
-                <div class="card text-white bg-danger mb-3" style="padding:20px;">
+                <script src="https://sdk.mercadopago.com/js/v2"></script>
 
-                    <small>Nome</small>
-                    <input type="text" id="cartao_nome" placeholder="NOME NO CARTÃO" value='' />
-                    <small>Número</small>
-                    <input inputmode="numeric" maxlength='19' type="text" id="cartao_numero" placeholder="0000 0000 0000 0000" value='' />
-                    <div class="row">
-                        <div class="col-4">
-                            <small>BANDEIRAS</small>
-                            <div class="row">
-                                <div class="col">
-                                    <h2>
-                                        <i class="fa-brands fa-cc-mastercard"></i>
-                                    </h2>
-                                </div>
-                                <div class="col">
-                                    <h2>
-                                        <i class="fa-brands fa-cc-visa"></i>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <small>MM</small>
-                            <input inputmode="numeric" maxlength='2' type="text" id="cartao_validade_mes" placeholder="00" value='' />
-                        </div>
-                        <div class="col-3">
-                            <small>AAAA</small>
-                            <input inputmode="numeric" maxlength='4' type="text" id="cartao_validade_ano" placeholder="0000" value='' />
-                        </div>
-                        <div class="col-3">
-                            <small>CVV</small>
-                            <input inputmode="numeric" maxlength='4' type="text" id="cartao_ccv" placeholder="0000" value='' />
-                        </div>
-                    </div>
-                </div>
-                <button class="btn btn-secondary btn-block btn-lg" id="Pagar" tentativas="<?=$d->tentativas_pagamento?>" loja="<?=$d->id_loja?>">
-                    <i class="fa fa-calculator" aria-hidden="true"></i>
-                    PAGAR R$ <?=number_format($d->total, 2, ',','.')?>
-                </button>
+                <script>
+                    const mp = new MercadoPago("APP_USR-dc7289b9-3b81-47e0-b705-f935a324b0d7");
 
-                <div class="alertas animate__animated animate__fadeIn animate__infinite animate__slower">
-                    Atenção, você possui <span tentativa><?=$d->tentativas_pagamento?></span> tentativa(s)!
-                </div>
+
+
+                    const cardForm = mp.cardForm({
+                        amount: "100.5",
+                        iframe: true,
+                        form: {
+                            id: "form-checkout",
+                            cardNumber: {
+                            id: "form-checkout__cardNumber",
+                            placeholder: "Número do cartão",
+                            },
+                            expirationDate: {
+                            id: "form-checkout__expirationDate",
+                            placeholder: "MM/YY",
+                            },
+                            securityCode: {
+                            id: "form-checkout__securityCode",
+                            placeholder: "Código de segurança",
+                            },
+                            cardholderName: {
+                            id: "form-checkout__cardholderName",
+                            placeholder: "Titular do cartão",
+                            },
+                            issuer: {
+                            id: "form-checkout__issuer",
+                            placeholder: "Banco emissor",
+                            },
+                            installments: {
+                            id: "form-checkout__installments",
+                            placeholder: "Parcelas",
+                            },
+                            identificationType: {
+                            id: "form-checkout__identificationType",
+                            placeholder: "Tipo de documento",
+                            },
+                            identificationNumber: {
+                            id: "form-checkout__identificationNumber",
+                            placeholder: "Número do documento",
+                            },
+                            cardholderEmail: {
+                            id: "form-checkout__cardholderEmail",
+                            placeholder: "E-mail",
+                            },
+                        },
+                        callbacks: {
+                            onFormMounted: error => {
+                            if (error) return console.warn("Form Mounted handling error: ", error);
+                            console.log("Form mounted");
+                            },
+                            onSubmit: event => {
+                            event.preventDefault();
+
+                            const {
+                                paymentMethodId: payment_method_id,
+                                issuerId: issuer_id,
+                                cardholderEmail: email,
+                                amount,
+                                token,
+                                installments,
+                                identificationNumber,
+                                identificationType,
+                            } = cardForm.getCardFormData();
+
+                            fetch("/process_payment", {
+                                method: "POST",
+                                headers: {
+                                "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify({
+                                token,
+                                issuer_id,
+                                payment_method_id,
+                                transaction_amount: Number(amount),
+                                installments: Number(installments),
+                                description: "Descrição do produto",
+                                payer: {
+                                    email,
+                                    identification: {
+                                    type: identificationType,
+                                    number: identificationNumber,
+                                    },
+                                },
+                                }),
+                            });
+                            },
+                            onFetching: (resource) => {
+                            console.log("Fetching resource: ", resource);
+
+                            // Animate progress bar
+                            const progressBar = document.querySelector(".progress-bar");
+                            progressBar.removeAttribute("value");
+
+                            return () => {
+                                progressBar.setAttribute("value", "0");
+                            };
+                            }
+                        },
+                    });
+
+
+                </script>
+
+
+
+
+                <style>
+                    #form-checkout {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 600px;
+                    }
+
+                    .container {
+                    height: 18px;
+                    display: inline-block;
+                    border: 1px solid rgb(118, 118, 118);
+                    border-radius: 2px;
+                    padding: 1px 2px;
+                    }
+                </style>
+                <form id="form-checkout">
+                    <div id="form-checkout__cardNumber" class="container"></div>
+                    <div id="form-checkout__expirationDate" class="container"></div>
+                    <div id="form-checkout__securityCode" class="container"></div>
+                    <input type="text" id="form-checkout__cardholderName" />
+                    <select id="form-checkout__issuer"></select>
+                    <select id="form-checkout__installments"></select>
+                    <select id="form-checkout__identificationType"></select>
+                    <input type="text" id="form-checkout__identificationNumber" />
+                    <input type="email" id="form-checkout__cardholderEmail" />
+
+                    <button type="submit" id="form-checkout__submit">Pagar</button>
+                    <progress value="0" class="progress-bar">Carregando...</progress>
+                </form>
+
+
+
+
 
 
             </div>
@@ -215,71 +215,7 @@
         $("#cartao_validade_ano").mask("9999");
         $("#cartao_ccv").mask("9999");
 
-        $("#Pagar").click(function(){
 
-            kind = 'credit';
-            reference = '<?=$_SESSION['AppVenda']?>';
-            amount = '<?=$d->total?>';
-            cardholderName = $("#cartao_nome").val();
-            cardNumber = $("#cartao_numero").val();
-            expirationMonth = $("#cartao_validade_mes").val();
-            expirationYear = $("#cartao_validade_ano").val();
-            securityCode = $("#cartao_ccv").val();
-            tentativas = $(this).attr("tentativas");
-            loja = $(this).attr("loja");
-            captcha = '<?=$_POST['captcha']?>';
-
-            if(tentativas == 0){
-                msg = '<div style="color:red"><center><h2><i class="fa-solid fa-ban"></i></h2>Você passou de três tentativas de pagamento com cartão de crédito. Favor selecionar outra forma de pagamento!</center></div>';
-                $.alert(msg);
-                return false;
-            }
-
-            if(
-                    !kind
-                ||  !reference
-                ||  !amount
-                ||  !cardholderName
-                ||  !cardNumber
-                ||  !expirationMonth
-                ||  !expirationYear
-                ||  !securityCode
-
-            ){
-                $.alert('Preenche os dados do cartão corretamente!');
-                return false;
-            }
-
-            $.ajax({
-                url:"src/pagar_credito.php?convidado=<?=$_SESSION['convidado']?>",
-                type:"POST",
-                data:{
-                    kind,
-                    reference,
-                    amount,
-                    cardholderName,
-                    cardNumber,
-                    expirationMonth,
-                    expirationYear,
-                    securityCode,
-                    loja,
-                    captcha,
-                    acao:'pagar'
-                },
-                success:function(dados){
-                    let retorno = JSON.parse(dados);
-                    $.alert(retorno.msg);
-                    tentativa = (tentativas*1-1);
-                    $("#Pagar").attr("tentativas", tentativa);
-                    $(".alertas").css("display","block");
-                    $("span[tentativa]").html(tentativa);
-                    if (retorno.status == 'Approved') {
-
-                    }
-                }
-            });
-
-        });
 
 
     })
