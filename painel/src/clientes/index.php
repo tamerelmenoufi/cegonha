@@ -133,7 +133,7 @@
           lista = [];
           $(".marcados").each(function(){
             if($(this).prop("checked") == true){
-              lista.push([$(this).val()]);
+              lista.push($(this).val());
             }
           });
 
