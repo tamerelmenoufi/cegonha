@@ -19,14 +19,14 @@
 
     }
 
-    // SendWapp('92991886570', 'Mensagem com confirmação de envio dos convites');
-    SendWapp(
-            '92991886570',
-            [
-                'nome' => $nome,
-                'arquivo' => $arquivo
-            ],
-            'file'
-        );
+    SendWapp('92991886570', 'Mensagem com confirmação de envio dos convites');
+    // SendWapp(
+    //         '92991886570',
+    //         [
+    //             'nome' => $nome,
+    //             'arquivo' => $arquivo
+    //         ],
+    //         'file'
+    //     );
 
 
