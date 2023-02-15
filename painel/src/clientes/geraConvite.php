@@ -23,6 +23,8 @@ function GerarConvite($cod){
                 width:1024px;
                 left:0;
                 top:0;
+                margin:0;
+                padding:0;
             }
             .corpo img[qrcode]{
                 position:absolute;
