@@ -7,6 +7,8 @@
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
 
+
+
 ?>
 <style>
 
@@ -155,7 +157,9 @@
 
 
                 <style>
-
+                    #form-checkout div{
+                        height:40px;
+                    }
                 </style>
                 <form id="form-checkout">
                     <div id="form-checkout__cardNumber" class="container"></div>
