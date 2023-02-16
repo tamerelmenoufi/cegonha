@@ -114,7 +114,7 @@
                                 identificationType,
                             } = cardForm.getCardFormData();
 
-                            fetch("/process_payment", {
+                            fetch("/pagar_credito_dados.php", {
                                 method: "POST",
                                 headers: {
                                 "Content-Type": "application/json",
@@ -138,7 +138,6 @@
                             },
                             onFetching: (resource) => {
                             console.log("Fetching resource: ", resource);
-
                             // Animate progress bar
                             const progressBar = document.querySelector(".progress-bar");
                             progressBar.removeAttribute("value");
