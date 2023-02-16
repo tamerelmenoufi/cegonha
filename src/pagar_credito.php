@@ -165,12 +165,12 @@
                     <div id="form-checkout__cardNumber" class="container"></div>
                     <div id="form-checkout__expirationDate" class="container"></div>
                     <div id="form-checkout__securityCode" class="container"></div>
-                    <input type="text" id="form-checkout__cardholderName" />
+                    <input type="text" id="form-checkout__cardholderName" value="TAMIR MOHAMED EL ME" />
                     <select id="form-checkout__issuer"></select>
                     <select id="form-checkout__installments"></select>
                     <select id="form-checkout__identificationType"></select>
-                    <input type="text" id="form-checkout__identificationNumber" />
-                    <input type="email" id="form-checkout__cardholderEmail" />
+                    <input type="text" id="form-checkout__identificationNumber" value="00001" />
+                    <input type="email" id="form-checkout__cardholderEmail" value="tamer@mohatron.com.br" />
 
                     <button type="submit" id="form-checkout__submit">Pagar</button>
                     <progress value="0" class="progress-bar">Carregando...</progress>
