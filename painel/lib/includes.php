@@ -11,7 +11,7 @@
     // $localSite = "http://146.190.52.49:8081/app/cegonha/";
 
 
-    $localPainel = "https://cegonha.project.tec.com/painel/";
+    $localPainel = "https://cegonha.project.tec/painel/";
     $localSite = "https://cegonha.project.tec.br/";
 
 
