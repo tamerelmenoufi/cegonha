@@ -114,7 +114,7 @@
                                 identificationType,
                             } = cardForm.getCardFormData();
 
-                            fetch("/pagar_credito_dados.php", {
+                            fetch("/src/pagar_credito_dados.php", {
                                 method: "POST",
                                 headers: {
                                 "Content-Type": "application/json",
