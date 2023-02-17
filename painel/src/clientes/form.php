@@ -75,6 +75,19 @@
                     <input type="text" name="telefone" id="telefone" class="form-control" placeholder="telefone" value="<?=$d->telefone?>">
                     <label for="telefone">Telefone*</label>
                 </div>
+
+                <div class="form-group form-radio">
+                    <input type="radio" class="form-radio-input" id="conidado_pai" name="convidado" value="Papai" <?=(($d->convidado == 'Papai')?'checked':false)?>>
+                    <label class="form-radio-label" for="conidado_pai">Convidados do pai</label>
+                </div>
+
+
+                <div class="form-group form-radio">
+                    <input type="radio" class="form-radio-input" id="conidado_mae" name="convidado" value="Mamãe" <?=(($d->convidado == 'Mamãe')?'checked':false)?>>
+                    <label class="form-radio-label" for="conidado_mae">Convidados da mãe</label>
+                </div>
+
+
                 <!-- <div class="form-floating mb-3">
                     <input type="text" name="email" id="email" class="form-control" placeholder="E-mail" value="<?=$d->email?>">
                     <label for="email">E-mail</label>
