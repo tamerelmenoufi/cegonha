@@ -53,6 +53,7 @@
                   <th scope="col" style="width:100%">Nome</th>
                   <!-- <th scope="col">CPF</th> -->
                   <th scope="col">Telefone</th>
+                  <th scope="col">Convidado</th>
                   <!-- <th scope="col" style="width:50%">E-mail</th> -->
                   <!-- <th scope="col">Compras</th> -->
                   <th scope="col">Ações</th>
@@ -73,6 +74,7 @@
                   <td style="white-space: nowrap;"><?=$d->nome?></td>
                   <!-- <td style="white-space: nowrap;"><?=$d->cpf?></td> -->
                   <td style="white-space: nowrap;"><?=$d->telefone?></td>
+                  <td style="white-space: nowrap;"><?=$d->convidado?></td>
                   <!-- <td style="white-space: nowrap;"><?=$d->email?></td> -->
                   <!-- <td style="white-space: nowrap;"><?=$d->vendas?></td> -->
                   <td style="white-space: nowrap;">
