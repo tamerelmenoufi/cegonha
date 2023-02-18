@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+    include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
+
+
+
+    $query = "select * from vendas where codigo = '{$_SESSION['AppVenda']}'";
+    $result = mysqli_query($con, $query);
+    $d = mysqli_fetch_object($result);
+
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
