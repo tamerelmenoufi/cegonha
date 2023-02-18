@@ -41,7 +41,7 @@
             'file'
         );
         sleep(2);
-        SendWapp('92991886570', $mensagem2);
+        SendWapp($d->telefone, $mensagem2);
         sleep(1);
 
     }
