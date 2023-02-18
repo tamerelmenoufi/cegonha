@@ -31,16 +31,16 @@
 
 
      // SendWapp('92991886570', $mensagem1);
-        // SendWapp(
-        //     $d->telefone,
-        //     [
-        //         'nome' => $nome,
-        //         'arquivo' => $arquivo,
-        //         'mensagem' => $mensagem1
-        //     ],
-        //     'file'
-        // );
-        // sleep(2);
+        SendWapp(
+            $d->telefone,
+            [
+                'nome' => $nome,
+                'arquivo' => $arquivo,
+                'mensagem' => $mensagem1
+            ],
+            'file'
+        );
+        sleep(2);
         SendWapp($d->telefone, $mensagem2);
         sleep(1);
 
