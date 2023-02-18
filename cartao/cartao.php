@@ -142,7 +142,7 @@
               },
             }),
           });
-          alert('Concluido 3')
+          parent.payConfirm();
 
         },
         onFetching: (resource) => {
