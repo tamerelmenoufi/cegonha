@@ -48,4 +48,5 @@ $query = "update vendas set
                             operadora_id='{$resposta->id}',
                             operadora_situacao='{$resposta->status}'
             where codigo = '{$_SESSION['AppVenda']}'";
+
 mysqli_query($con, $query);
