@@ -1,8 +1,6 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 
-
-
     $query = "select * from vendas where codigo = '{$_SESSION['AppVenda']}'";
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
@@ -63,7 +61,7 @@
 <script>
 
     const cardForm = mp.cardForm({
-      amount: "<?=(($_GET['v'])?:"100.5")?>",
+      amount: "<?=(($_GET['v'])?:$d->total)?>",
       iframe: true,
       form: {
         id: "form-checkout",
@@ -134,7 +132,7 @@
               payment_method_id,
               transaction_amount: Number(amount),
               installments: Number(installments),
-              description: "Descrição do produto",
+              description: "Chá Revelação",
               payer: {
                 email,
                 identification: {
@@ -147,6 +145,7 @@
 
         },
         onFetching: (resource) => {
+
           console.log("Fetching resource: ", resource);
 
           // Animate progress bar
