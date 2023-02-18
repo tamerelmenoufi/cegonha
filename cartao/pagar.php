@@ -1,5 +1,8 @@
 <?php
 
+include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
+
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST))
 $_POST = json_decode(file_get_contents('php://input'), true);
 
@@ -14,7 +17,6 @@ $Json = '{
       "email": "'.$_POST['payer']['email'].'"
     }
 }';
-
 
 
 $ch = curl_init();
@@ -40,4 +42,10 @@ $resposta = json_decode($response);
 
 file_put_contents('x.txt',print_r($_POST, true)."\n\n\n".date("d/m/Y H:i:s")."\n\n\n\n".$Json."\n\n\n\n".$response."\n\n\n\n".print_r($resposta, true));
 
-return $response;
+
+$query = "update vendas set
+                            operadora = 'mercadopago',
+                            operadora_id='{$resposta->id}',
+                            operadora_situacao='{$resposta->status}'
+            where codigo = '{$_SESSION['AppVenda']}'";
+mysqli_query($con, $query);
