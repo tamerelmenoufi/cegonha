@@ -23,8 +23,8 @@
         $arquivo = "http://project.mohatron.com/cegonha/painel/src/clientes/{$arq}";
         $nome = "convite.png";
 
-        $msg['papai'] = "Olá {$d->nome}, aqui é o Miguel Oliveira. Estou vivendo um momento bastante especial e dia 25/02/2023, é a data escolhida para o nosso chá revelação. Quero dividir com você essa descoberta. Conto com sua presença!";
-        $msg['mamãe'] = "Olá {$d->nome}, aqui é a Ana Carla. Estou vivendo um momento bastante especial e dia 25/02/23 (sábado), é a data escolhida para meu chá revelação. Quero dividir com você essa descoberta. Conto com sua presença!";
+        $msg['Papai'] = "Olá, {$d->nome} aqui é o Miguel Oliveira. Estou vivendo um momento bastante especial e dia 25/02/2023, é a data escolhida para o nosso chá revelação. Quero dividir com você essa descoberta. Conto com sua presença!";
+        $msg['Mamãe'] = "Olá, {$d->nome} aqui é a Ana Carla. Estou vivendo um momento bastante especial e dia 25/02/23 (sábado), é a data escolhida para meu chá revelação. Quero dividir com você essa descoberta. Conto com sua presença!";
 
         $mensagem1 = $msg[$d->convidado];
         $mensagem2 = "Acesse a minha lista de presentes no endereço: https://cegonha.project.tec.br/?c=".md5($c);
