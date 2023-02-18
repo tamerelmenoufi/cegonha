@@ -39,3 +39,5 @@ curl_close($ch);
 $resposta = json_decode($response);
 
 file_put_contents('x.txt',print_r($_POST, true)."\n\n\n".date("d/m/Y H:i:s")."\n\n\n\n".$Json."\n\n\n\n".$response."\n\n\n\n".print_r($resposta, true));
+
+return $response;

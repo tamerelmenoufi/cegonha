@@ -144,6 +144,7 @@
               },
             }),
           });
+
         },
         onFetching: (resource) => {
           console.log("Fetching resource: ", resource);
