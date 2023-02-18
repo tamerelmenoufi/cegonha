@@ -52,7 +52,7 @@
 <script>
 
     const cardForm = mp.cardForm({
-      amount: <?=(($_GET['v'])?:1.00)?>,
+      amount: "<?=(($_GET['v'])?:"100.5")?>",
       iframe: true,
       form: {
         id: "form-checkout",
