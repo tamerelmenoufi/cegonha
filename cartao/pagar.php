@@ -46,7 +46,9 @@ $query = "update vendas set
                             forma_pagamento = 'credito',
                             operadora = 'mercadopago',
                             operadora_id='{$resposta->id}',
-                            operadora_situacao='{$resposta->status}'
+                            operadora_situacao='{$resposta->status}',
+                            operadora_retorno='{$response}',
+                            situacao = 'c'
             where codigo = '{$_SESSION['codVenda']}'";
 
 mysqli_query($con, $query);
