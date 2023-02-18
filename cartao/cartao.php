@@ -106,6 +106,7 @@
         onFormMounted: error => {
           if (error) return console.warn("Form Mounted handling error: ", error);
           console.log("Form mounted");
+          alert('erro');
         },
         onSubmit: event => {
           event.preventDefault();
