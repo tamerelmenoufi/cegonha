@@ -37,7 +37,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $Json);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     "accept: application/json",
     "Content-Type: application/json",
-    "Authorization: Bearer TEST-1171310380547745-050412-ccca37ccd889df8845f6c748fe3d98ec-182791413"
+    "Authorization: Bearer {$cBarb['mercado_pago']['producao']['TOKEN']}"
 ));
 
 $response = curl_exec($ch);

@@ -1,7 +1,7 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/app/cegonha/painel/lib/includes.php");
 
-    echo $query = "select * from vendas where codigo = '{$_SESSION['codVenda']}'";
+    $query = "select * from vendas where codigo = '{$_SESSION['codVenda']}'";
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
 
@@ -21,8 +21,8 @@
 
 
 <script>
-  // const mp = new MercadoPago("APP_USR-dc7289b9-3b81-47e0-b705-f935a324b0d7");
-  const mp = new MercadoPago("TEST-82f33771-bbd5-4bc6-93cb-e98715ea4d16");
+  const mp = new MercadoPago("APP_USR-dc7289b9-3b81-47e0-b705-f935a324b0d7");
+  // const mp = new MercadoPago("TEST-82f33771-bbd5-4bc6-93cb-e98715ea4d16");
 </script>
 
 
