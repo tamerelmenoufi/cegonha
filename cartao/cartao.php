@@ -119,9 +119,7 @@
             installments,
             identificationNumber,
             identificationType,
-          } = cardForm.getCardFormData().on(()=>{
-            alert('Compra finalizada')
-          });
+          } = cardForm.getCardFormData();
 
           fetch("/cartao/pagar.php", {
             method: "POST",
@@ -147,7 +145,7 @@
 
         },
         onFetching: (resource) => {
-
+          alert('concluído2')
           console.log("Fetching resource: ", resource);
 
           // Animate progress bar
@@ -156,6 +154,7 @@
 
           return () => {
             progressBar.setAttribute("value", "0");
+            alert('concluído1')
           };
         }
       },
