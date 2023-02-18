@@ -40,6 +40,7 @@
             ],
             'file'
         );
+        sleep(2);
         SendWapp('92991886570', $mensagem2);
 
     }
