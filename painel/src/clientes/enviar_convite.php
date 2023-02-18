@@ -27,7 +27,7 @@
         $msg['Mamãe'] = "Olá, {$d->nome} aqui é a Ana Carla. Estou vivendo um momento bastante especial e dia 25/02/23 (sábado), é a data escolhida para meu chá revelação. Quero dividir com você essa descoberta. Conto com sua presença!";
 
         $mensagem1 = $msg[$d->convidado];
-        $mensagem2 = "Acesse a minha lista de presentes no endereço: https://cegonha.project.tec.br/?c=".md5($c);
+        $mensagem2 = "Acesse a minha lista de presentes no endereço: https://cegonha.project.tec.br/?c=".md5($d->codigo);
 
 
      // SendWapp('92991886570', $mensagem1);
