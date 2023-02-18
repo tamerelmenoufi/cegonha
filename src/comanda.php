@@ -309,12 +309,7 @@
             $.ajax({
                 url:"src/pagar_credito.php",
                 success:function(dados){
-                    // $(".forma_pagamento").html(dados);
-                    $.alert({
-                        content:dados,
-                        title:"Cartão de Crédito",
-                        columnClass:"col-md-8"
-                    });
+                    $(".forma_pagamento").html(dados);
                 }
             });
 
