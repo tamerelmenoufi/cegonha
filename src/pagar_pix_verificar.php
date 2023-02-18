@@ -16,7 +16,6 @@
     if($retorno->status == 'approved'){
         //Aqui entra a solicitação da Bee
         // e tbm a mudança de status para pedido em produção
-
         mysqli_query($con, "update vendas set
                             operadora_situacao = '{$retorno->status}',
                             operadora_retorno = '{$operadora_retorno}',
@@ -24,9 +23,7 @@
                         where operadora_id = '{$_POST['id']}'
                     ");
 
-        $_SESSION['AppVenda'] = false;
-        $_SESSION['AppPedido'] = false;
-        $_SESSION['AppCarrinho'] = false;
+        $_SESSION['CodVenda'] = false;
 
     }
 
