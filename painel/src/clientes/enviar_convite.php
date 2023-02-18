@@ -18,7 +18,7 @@
 
         // $arq = GerarConvite($_POST['cod']);
 
-        echo "<img src='src/clientes/".$arq."' /><hr>";
+        echo "<img src='src/clientes/".$arq."' /><br>{$d->nome} ({$d->convidado})<hr>";
 
         $arquivo = "http://project.mohatron.com/cegonha/painel/src/clientes/{$arq}";
         $nome = "convite.png";
@@ -32,7 +32,7 @@
 
      // SendWapp('92991886570', $mensagem1);
         SendWapp(
-            '92991886570',
+            $d->telefone,
             [
                 'nome' => $nome,
                 'arquivo' => $arquivo,
@@ -42,6 +42,7 @@
         );
         sleep(2);
         SendWapp('92991886570', $mensagem2);
+        sleep(1);
 
     }
 
