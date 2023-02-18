@@ -15,9 +15,8 @@ $Json = '{
     }
 }';
 
-file_put_contents('x.txt',print_r($_POST, true)."\n\n\n".date("d/m/Y H:i:s")."\n\n\n\n".$Json);
 
-exit;
+
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "https://api.mercadopago.com/v1/payments");
@@ -26,27 +25,15 @@ curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
 curl_setopt($ch, CURLOPT_POST, TRUE);
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, "{
-    \"vehicle\": \"M\",
-    \"needReturn\": \"N\",
-    \"origin\": {
-        \"externalId\": {$id}
-    },
-    \"destination\": {
-        \"type\": \"COORDS\",
-        \"address\": {
-            \"latitude\": {$lat},
-            \"longitude\": {$lng}
-        }
-    }
-}");
+curl_setopt($ch, CURLOPT_POSTFIELDS, $Json);
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    "accept: application/json",
     "Content-Type: application/json",
-    "Authorization: ".$this->Autenticacao()
+    "Authorization: Bearer TEST-1171310380547745-050412-ccca37ccd889df8845f6c748fe3d98ec-182791413"
 ));
 
 $response = curl_exec($ch);
 curl_close($ch);
 
-return $response;
+file_put_contents('x.txt',print_r($_POST, true)."\n\n\n".date("d/m/Y H:i:s")."\n\n\n\n".$Json."\n\n\n\n".$response);
