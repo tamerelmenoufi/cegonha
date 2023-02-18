@@ -19,7 +19,7 @@
         mysqli_query($con, "update vendas set
                             operadora_situacao = '{$retorno->status}',
                             operadora_retorno = '{$operadora_retorno}',
-                            situacao = 'p'
+                            situacao = 'c'
                         where operadora_id = '{$_POST['id']}'
                     ");
 
