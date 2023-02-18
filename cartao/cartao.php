@@ -142,10 +142,10 @@
               },
             }),
           });
+          alert('Concluido 3')
 
         },
         onFetching: (resource) => {
-          alert('concluído2')
           console.log("Fetching resource: ", resource);
 
           // Animate progress bar
@@ -154,7 +154,6 @@
 
           return () => {
             progressBar.setAttribute("value", "0");
-            alert('concluído1')
           };
         }
       },
