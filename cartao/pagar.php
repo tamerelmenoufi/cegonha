@@ -47,6 +47,6 @@ $query = "update vendas set
                             operadora = 'mercadopago',
                             operadora_id='{$resposta->id}',
                             operadora_situacao='{$resposta->status}'
-            where codigo = '{$_SESSION['AppVenda']}'";
+            where codigo = '{$_SESSION['codVenda']}'";
 
 mysqli_query($con, $query);

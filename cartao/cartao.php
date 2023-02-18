@@ -119,7 +119,9 @@
             installments,
             identificationNumber,
             identificationType,
-          } = cardForm.getCardFormData();
+          } = cardForm.getCardFormData().on(()=>{
+            alert('Compra finalizada')
+          });
 
           fetch("/cartao/pagar.php", {
             method: "POST",
