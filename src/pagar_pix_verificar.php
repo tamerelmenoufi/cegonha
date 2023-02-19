@@ -54,7 +54,7 @@
         }else{
         ?>
             $.alert('Pagamento Confirmado.<br>Seu pedido está em preparo!')
-            window.location.href='?c=<?=md5($_SESSION['convidado'])?>';
+            window.location.href='./index.php?c=<?=md5($_SESSION['convidado'])?>';
         <?php
         }
         ?>

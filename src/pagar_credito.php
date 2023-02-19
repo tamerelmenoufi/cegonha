@@ -12,7 +12,7 @@
     $(function(){
         payConfirm = () => {
             $.alert('Obrigado pelo seu pagamento!');
-            window.location.href="?c=<?=md5($_SESSION['convidado'])?>"
+            window.location.href="./index.php?c=<?=md5($_SESSION['convidado'])?>"
         }
     })
 </script>
