@@ -55,7 +55,7 @@
         }else{
         ?>
             $.alert('Pagamento Confirmado.<br>Seu pedido está em preparo!')
-            PageClose(2);
+            window.location.href='?c=<?=md5($_SESSION['codVenda'])?>';
         <?php
         }
         ?>
