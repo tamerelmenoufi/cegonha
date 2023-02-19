@@ -54,7 +54,7 @@
         }else{
         ?>
             $.alert('Pagamento Confirmado.<br>Seu pedido está em preparo!')
-            window.location.href='./index.php?c=<?=md5($_SESSION['convidado'])?>';
+            window.location.href='https://cegonha.project.tec.br/index.php?c=<?=md5($_SESSION['convidado'])?>';
         <?php
         }
         ?>
