@@ -193,6 +193,10 @@
     </div>
 
     <div class="row" style="margin-top:30px; margin-bottom:30px;">
+        <div class="col-12 text-center">Selecione abaixo uma forma de pagamento</div>
+    </div>
+
+    <div class="row" style="margin-top:30px; margin-bottom:30px;">
         <div class="col-2"></div>
         <div class="col-4">
             <button class="btn btn-lg btn-primary w-100 credito">
