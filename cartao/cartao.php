@@ -41,20 +41,74 @@
       border-radius: 2px;
       padding: 1px 2px;
     }
+
+    td{
+      padding:5px;
+    }
+
   </style>
   <form id="form-checkout">
-    <div id="form-checkout__cardNumber" class="container"></div>
-    <div id="form-checkout__expirationDate" class="container"></div>
-    <div id="form-checkout__securityCode" class="container"></div>
-    <input type="text" id="form-checkout__cardholderName" />
-    <select id="form-checkout__issuer"></select>
-    <select id="form-checkout__installments"></select>
-    <select id="form-checkout__identificationType"></select>
-    <input type="text" id="form-checkout__identificationNumber" />
-    <input type="email" id="form-checkout__cardholderEmail" />
+    <table>
+      <tr>
+        <td>
+          <div id="form-checkout__cardNumber" class="container"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="form-checkout__expirationDate" class="container"></div>
+        </td>
+        <td>
+          <div id="form-checkout__securityCode" class="container"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="form-checkout__cardholderName" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select id="form-checkout__issuer"></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select id="form-checkout__installments"></select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select id="form-checkout__identificationType"></select>
+        </td>
+      </tr>
 
-    <button type="submit" id="form-checkout__submit">Pagar</button>
-    <progress value="0" class="progress-bar">Carregando...</progress>
+      <tr>
+        <td>
+          <input type="text" id="form-checkout__identificationNumber" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="email" id="form-checkout__cardholderEmail" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="submit" id="form-checkout__submit">Pagar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="email" id="form-checkout__cardholderEmail" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <progress value="0" class="progress-bar">Carregando...</progress>
+        </td>
+      </tr>
+    </table>
   </form>
 
 
