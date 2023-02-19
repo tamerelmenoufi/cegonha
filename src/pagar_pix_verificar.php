@@ -24,7 +24,6 @@
                     ");
 
         $_SESSION['CodVenda'] = false;
-
     }
 
 ?>
