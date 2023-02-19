@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cartão</title>
 </head>
 <body>
 
@@ -21,8 +21,7 @@
 
 
 <script>
-  const mp = new MercadoPago("APP_USR-dc7289b9-3b81-47e0-b705-f935a324b0d7");
-  // const mp = new MercadoPago("TEST-82f33771-bbd5-4bc6-93cb-e98715ea4d16");
+  const mp = new MercadoPago("APP_USR-f2f4a913-e224-4023-a358-278f57af5020");
 </script>
 
 
@@ -44,6 +43,10 @@
 
     td{
       padding:5px;
+    }
+
+    td div, td input, td select{
+      width:100%;
     }
 
   </style>
