@@ -105,18 +105,18 @@
                                         "description": "Venda '.$pedido.' - Chá Revelação",
                                         "payment_method_id": "pix",
                                         "payer": {
-                                        "email": "reny_elmenoufi@hotmail.com",
-                                        "first_name": "Reneane",
-                                        "last_name": "Elmenoufi",
+                                        "email": "a.carlavasc@gmail.com",
+                                        "first_name": "Ana",
+                                        "last_name": "Carla",
                                         "identification": {
                                             "type": "CPF",
-                                            "number": "56712596220"
+                                            "number": "83352848220"
                                         },
                                         "address": {
-                                            "zip_code": "69010110",
-                                            "street_name": "Monsenhor Coutinho",
-                                            "street_number": "600",
-                                            "neighborhood": "Centro",
+                                            "zip_code": "69058780",
+                                            "street_name": "Rua Marquês de Maranhão",
+                                            "street_number": "721",
+                                            "neighborhood": "Flores",
                                             "city": "Manaus",
                                             "federal_unit": "AM"
                                         }

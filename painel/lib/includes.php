@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include("/appinc/cBarb.php");
+    include("/appinc/cCegonha.php");
     $md5 = md5(date("YmdHis"));
 
     $localPainel = $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["HTTP_HOST"]."/";
