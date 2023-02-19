@@ -3,7 +3,7 @@
     include("geraConvite.php");
 
     $convidados = implode(", ",$_POST['convites']);
-
+    $qt = count($_POST['convites']);
     $query = "select * from clientes where codigo in ({$convidados})";
     $result = mysqli_query($con, $query);
     while($d = mysqli_fetch_object($result)){
@@ -46,7 +46,7 @@
 
     }
 
-    // SendWapp('92991886570', 'Mensagem com confirmação de envio dos convites');
+    SendWapp('92991886570', 'Enviados '.$qt." convite(s) pelo sistema de mensagem.");
     // SendWapp(
     //         '92991886570',
     //         [
