@@ -55,6 +55,11 @@
     <table>
       <tr>
         <td colspan="2">
+          <progress value="0" class="progress-bar">Carregando...</progress>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
           <div id="form-checkout__cardNumber" class="container"></div>
         </td>
       </tr>
@@ -100,11 +105,7 @@
           <button type="submit" id="form-checkout__submit">Pagar</button>
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
-          <progress value="0" class="progress-bar">Carregando...</progress>
-        </td>
-      </tr>
+
     </table>
   </form>
 
