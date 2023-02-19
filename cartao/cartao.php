@@ -90,8 +90,6 @@
         <td>
           <input type="text" id="form-checkout__identificationNumber" />
         </td>
-      </tr>
-      <tr>
         <td>
           <input type="email" id="form-checkout__cardholderEmail" />
         </td>
