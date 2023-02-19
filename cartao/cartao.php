@@ -45,7 +45,7 @@
       padding:5px;
     }
 
-    td div, td input, td select{
+    td div, td input, td select, td progress{
       width:100%;
     }
 
@@ -53,7 +53,7 @@
   <form id="form-checkout">
     <table>
       <tr>
-        <td>
+        <td colspan="2">
           <div id="form-checkout__cardNumber" class="container"></div>
         </td>
       </tr>
@@ -66,22 +66,22 @@
         </td>
       </tr>
       <tr>
-        <td>
+        <td colspan="2">
           <input type="text" id="form-checkout__cardholderName" />
         </td>
       </tr>
       <tr>
-        <td>
+        <td colspan="2">
           <select id="form-checkout__issuer"></select>
         </td>
       </tr>
       <tr>
-        <td>
+        <td colspan="2">
           <select id="form-checkout__installments"></select>
         </td>
       </tr>
       <tr>
-        <td>
+        <td colspan="2">
           <select id="form-checkout__identificationType"></select>
         </td>
       </tr>
@@ -97,17 +97,12 @@
         </td>
       </tr>
       <tr>
-        <td>
+        <td colspan="2">
           <button type="submit" id="form-checkout__submit">Pagar</button>
         </td>
       </tr>
       <tr>
-        <td>
-          <input type="email" id="form-checkout__cardholderEmail" />
-        </td>
-      </tr>
-      <tr>
-        <td>
+        <td colspan="2">
           <progress value="0" class="progress-bar">Carregando...</progress>
         </td>
       </tr>
