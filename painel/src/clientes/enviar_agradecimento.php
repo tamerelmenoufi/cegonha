@@ -9,7 +9,7 @@
         echo "<hr>";
         // sleep(2);
         // SendWapp($d->telefone, $mensagem);
-        sleep(1);
+        // sleep(1);
 
     }
 
