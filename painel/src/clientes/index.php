@@ -222,12 +222,16 @@
         })
 
         $(".enviarAgradecimento").click(function(){
-            console.log('entrou');
+            // console.log('entrou');
             $.ajax({
                 url:"src/clientes/enviar_agradecimento.php",
                 success:function(dados){
-                  console.log('concluiu');
-                  $.alert(dados);
+                  // console.log('concluiu');
+                  $.dialog({
+                    content:dados,
+                    title:"Agradecimentos",
+                    columnClass:'col-md-12'
+                  });
                 }
             })
         })
