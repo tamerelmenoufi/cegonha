@@ -221,7 +221,7 @@
             })
         })
 
-        $("button[enviarAgradecimento]").click(function(){
+        $(".enviarAgradecimento").click(function(){
             console.log('entrou');
             $.ajax({
                 url:"src/clientes/enviar_agradecimento.php",
