@@ -28,6 +28,7 @@
           <h5 class="card-header">Lista de Convidados</h5>
           <div class="card-body">
             <div style="display:flex; justify-content:end">
+
                 <button
                     class="btn btn-warning me-3 enviarConvites"
                 >Enviar Convite</button>
@@ -40,6 +41,10 @@
                     role="button"
                     aria-controls="offcanvasDireita"
                 >Novo Convite</button>
+
+                <button
+                    class="btn btn-warning me-3 enviarAgradecimento"
+                >Enviar Agradecimento</button>
             </div>
 
 
@@ -216,7 +221,14 @@
             })
         })
 
-
+        $("button[enviarAgradecimento]").click(function(){
+            $.ajax({
+                url:"src/clientes/enviarAgradecimento.php",
+                success:function(dados){
+                  $.alert(dados);
+                }
+            })
+        })
 
         $("button[delete]").click(function(){
             deletar = $(this).attr("delete");
