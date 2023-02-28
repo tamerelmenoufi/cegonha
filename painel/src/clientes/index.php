@@ -223,7 +223,7 @@
 
         $("button[enviarAgradecimento]").click(function(){
             $.ajax({
-                url:"src/clientes/enviarAgradecimento.php",
+                url:"src/clientes/enviar_agradecimento.php",
                 success:function(dados){
                   $.alert(dados);
                 }
