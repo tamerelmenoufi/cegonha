@@ -14,6 +14,7 @@
     }
 
     // SendWapp('92991886570', 'Enviados '.$qt." convite(s) pelo sistema de mensagem.");
+    SendWapp('92991886570', $mensagem);
     // SendWapp(
     //         '92991886570',
     //         [
