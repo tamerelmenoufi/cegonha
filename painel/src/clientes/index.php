@@ -43,7 +43,7 @@
                 >Novo Convite</button>
 
                 <button
-                    class="btn btn-warning me-3 enviarAgradecimento"
+                    class="btn btn-warning ms-3 enviarAgradecimento"
                 >Enviar Agradecimento</button>
             </div>
 
